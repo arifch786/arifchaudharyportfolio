@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/arifchaudharyportfolio/static/css/main.5440a4ac.css",
-    "main.js": "/arifchaudharyportfolio/static/js/main.c84dd010.js",
+    "main.css": "/arifchaudharyportfolio/static/css/main.4b5c0a1d.css",
+    "main.js": "/arifchaudharyportfolio/static/js/main.0bbdcec3.js",
     "static/media/blogimg7.jpg": "/arifchaudharyportfolio/static/media/blogimg7.76810045594d29fedc3f.jpg",
     "static/media/aboutsection.jpg": "/arifchaudharyportfolio/static/media/aboutsection.acb350eccca9296e516e.jpg",
     "static/media/blogimg4.jpg": "/arifchaudharyportfolio/static/media/blogimg4.d7a04698d53f4667bd92.jpg",
@@ -17,11 +17,11 @@
     "static/media/blogimg5.png": "/arifchaudharyportfolio/static/media/blogimg5.9aac2357d78195d70df3.png",
     "index.html": "/arifchaudharyportfolio/index.html",
     "static/media/About _ Victor Eke-8.svg": "/arifchaudharyportfolio/static/media/About _ Victor Eke-8.b33d48e5e42a770c03cb6139b3dc4381.svg",
-    "main.5440a4ac.css.map": "/arifchaudharyportfolio/static/css/main.5440a4ac.css.map",
-    "main.c84dd010.js.map": "/arifchaudharyportfolio/static/js/main.c84dd010.js.map"
+    "main.4b5c0a1d.css.map": "/arifchaudharyportfolio/static/css/main.4b5c0a1d.css.map",
+    "main.0bbdcec3.js.map": "/arifchaudharyportfolio/static/js/main.0bbdcec3.js.map"
   },
   "entrypoints": [
-    "static/css/main.5440a4ac.css",
-    "static/js/main.c84dd010.js"
+    "static/css/main.4b5c0a1d.css",
+    "static/js/main.0bbdcec3.js"
   ]
 }
