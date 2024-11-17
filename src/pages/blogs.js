@@ -8,6 +8,7 @@ import image5 from "../assets/images/blogsimages/blogimg5.png";
 import image6 from "../assets/images/blogsimages/blogimg6.jpg";
 import image7 from "../assets/images/blogsimages/blogimg7.jpg";
 
+
 const Blogs = () => {
     const [selectedCategory, setSelectedCategory] = useState("All");
 
