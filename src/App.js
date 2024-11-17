@@ -1,7 +1,7 @@
 
 // src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, HashRouter } from 'react-router-dom';
 import Navbar from '../src/Layout/Navbar';
 import Footer from '../src/Layout/Footer';
 import About from '../src/components/AboutSection';
@@ -13,7 +13,7 @@ import Blogs from './pages/blogs';
 
 const App = () => {
   return (
-    <Router>
+    <HashRouter>
       <Navbar/>
       <Routes>
       <Route path="/" element={<LandingPage/>} />
@@ -21,10 +21,9 @@ const App = () => {
         <Route path="/projects-page" element={<Projects />} />
         <Route path="/blogs-page" element={<Blogs />} />
         <Route path="/contactus-page" element={<ContactUs />} />
-
       </Routes>
       <Footer />
-    </Router>
+    </HashRouter>
   );
 };
 

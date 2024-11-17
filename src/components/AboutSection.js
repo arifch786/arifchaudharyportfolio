@@ -55,7 +55,7 @@ const items = {
 
 const AboutSection = () => {
     return (
-        <div style={{
+        <div id='about' style={{
             fontFamily: 'MyFont4, sans-serif'
         }}>
             <div class="max-w-6xl mx-auto p-6 md:flex md:space-x-8">

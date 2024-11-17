@@ -41,11 +41,11 @@ const Navbar = () => {
 
             {/* Desktop Menu */}
             <div className="hidden lg:flex space-x-8 text-sm font-semibold">
-                <a href="/" className={`${isActive('/') ? 'text-blue-600' : 'hover:text-gray-400 dark:hover:text-gray-200'}`}>Home</a>
-                <a href="/about" className={`${isActive('/about') ? 'text-blue-600' : 'hover:text-gray-400 dark:hover:text-gray-200'}`}>About</a>
-                <a href="/projects-page" className={`${isActive('/projects-page') ? 'text-blue-600' : 'hover:text-gray-400 dark:hover:text-gray-200'}`}>Projects</a>
-                <a href="/blogs-page" className={`${isActive('/blogs-page') ? 'text-blue-600' : 'hover:text-gray-400 dark:hover:text-gray-200'}`}>Blog</a>
-                <a href="/contactus-page" className={`${isActive('/contactus-page') ? 'text-blue-600' : 'hover:text-gray-400 dark:hover:text-gray-200'}`}>Contact</a>
+                <a href="#/" className={`${isActive('/') ? 'text-blue-600' : 'hover:text-gray-400 dark:hover:text-gray-200'}`}>Home</a>
+                <a href="#about" className={`${isActive('/about') ? 'text-blue-600' : 'hover:text-gray-400 dark:hover:text-gray-200'}`}>About</a>
+                <a href="#projects-page" className={`${isActive('/projects-page') ? 'text-blue-600' : 'hover:text-gray-400 dark:hover:text-gray-200'}`}>Projects</a>
+                <a href="#blogs-page" className={`${isActive('/blogs-page') ? 'text-blue-600' : 'hover:text-gray-400 dark:hover:text-gray-200'}`}>Blog</a>
+                <a href="#contactus-page" className={`${isActive('/contactus-page') ? 'text-blue-600' : 'hover:text-gray-400 dark:hover:text-gray-200'}`}>Contact</a>
             </div>
 
             {/* Dark Mode Toggle */}
