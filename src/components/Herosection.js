@@ -10,13 +10,13 @@ const Herosection = () => {
                     <h1 style={{
                         fontFamily: 'MyFont5, sans-serif'
                     }} className="text-3xl text-gray-700 dark:text-gray-300 sm:text-4xl lg:text-5xl font-medium">
-                        Software engineer, technical writer <br />& open-source maintainer
+                        Full Stack Software engineer, technical writer <br />& Crafting Scalable Solutions & Clear Documentation
                     </h1>
                     <p className="text-gray-700 dark:text-gray-300 text-base sm:text-base lg:text-lg py-2">
-                        I'm Victor Eke, an experienced frontend developer passionate about learning and building open-source software that is beneficial to developers and the world at large.
+                        I'm muhammad Arif Raza, an experienced Full Stack developer passionate about learning and Building impactful solutions with a passion for continuous growth
                     </p>
                     <div className="flex flex-wrap gap-4 text-gray-700 dark:text-gray-300 py-2 text-lg">
-                        <a href="#" className="flex items-center space-x-2 hover:text-gray-950"><i className="fab fa-github"><FaGithub /></i><span>GitHub</span></a>
+                        <a href="https://github.com/arifch786" className="flex items-center space-x-2 hover:text-gray-950"><i className="fab fa-github"><FaGithub /></i><span>GitHub</span></a>
                         <a href="#" className="flex items-center space-x-2 hover:text-gray-950"><i className="fab fa-twitter"><FaTwitter /></i><span>X</span></a>
                         <a href="#" className="flex items-center space-x-2 hover:text-gray-950"><i className="fab fa-linkedin"><FaLinkedin /></i><span>LinkedIn</span></a>
                         <a href="#" className="flex items-center space-x-2 hover:text-gray-950"><i className="fab fa-github"><FaInstagram /></i><span>Instagram</span></a>

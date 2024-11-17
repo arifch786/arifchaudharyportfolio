@@ -106,7 +106,7 @@ const Blogs = () => {
                             <a
                                 href={data.link}
                                 key={index}
-                                className="no-underline text-inherit"
+                                className="no-underline text-inherit my-2"
                             >
                                 <motion.article
                                     key={index}
@@ -121,7 +121,7 @@ const Blogs = () => {
                                         ],
                                     }}
                                     transition={{
-                                        duration: 1,
+                                        duration: 0.5,
                                         repeat: Infinity,
                                         repeatType: "mirror"
                                     }}

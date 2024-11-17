@@ -9,8 +9,6 @@ import { SiRedux, SiNextdotjs, SiTailwindcss, SiVite, SiExpress, SiMongodb, SiJe
 const items = {
     tools: [
         { name: "Visual Studio Code", url: "#", description: "Text Editor", icon: <SiVisualstudio className="text-blue-500" /> },
-        { name: "PyCharm", url: "#", description: "Python IDE", icon: <SiJetbrains className="text-green-500" /> },
-        { name: "IntelliJ IDEA", url: "#", description: "Java IDE", icon: <SiJetbrains className="text-purple-500" /> },
         { name: "Firefox", url: "#", description: "Web Browser", icon: <FaFirefoxBrowser className="text-orange-500" /> },
         { name: "Google Chrome", url: "#", description: "Web Browser", icon: <FaChrome className="text-yellow-500" /> },
         { name: "Figma", url: "#", description: "Design Tool", icon: <FaFigma className="text-pink-500" /> },
@@ -22,7 +20,6 @@ const items = {
         { name: "React", url: "#", description: "UI Library", icon: <FaReact className="text-sky-600" /> },
         { name: "Next.js", url: "#", description: "React Framework", icon: <SiNextdotjs className="text-black" /> },
         { name: "Redux", url: "#", description: "Production-grade State Management", icon: <SiRedux className="text-purple-600" /> },
-        { name: "Zustand", url: "#", description: "State Management (personal projects)", icon: <FaNodeJs className="text-black" /> },
         { name: "Tailwind CSS", url: "#", description: "Styling Library", icon: <SiTailwindcss className="text-sky-500" /> },
         { name: "Sass", url: "#", description: "CSS Preprocessor", icon: <FaSass className="text-pink-500" /> },
         { name: "VitePress", url: "#", description: "Static Site Generator", icon: <SiVite className="text-indigo-600" /> },
@@ -41,14 +38,6 @@ const items = {
         { name: "Steam", url: "#", description: "Gaming", icon: <FaSteam className="text-blue-600" /> },
         { name: "Vercel", url: "#", description: "Hosting and Database", icon: <SiVercel className="text-black" /> },
         { name: "Netlify", url: "#", description: "Static JamStack hosting", icon: <SiNetlify className="text-teal-500" /> },
-    ],
-    hardware: [
-        { name: "Asus Zephyrus M15", url: "#", description: "Work Laptop", icon: <SiAsus className="text-gray-800" /> },
-        { name: "Samsung S22D300HY", url: "#", description: "22' Business Monitor", icon: <SiSamsung className="text-blue-600" /> },
-        { name: "Xiaomi G34WQ", url: "#", description: "32' Curved Gaming Monitor", icon: <SiXiaomi className="text-orange-500" /> },
-        { name: "Logitech MX Keys", url: "#", description: "Wireless Keyboard", icon: <SiLogitech className="text-blue-500" /> },
-        { name: "Logitech MX Master 2S", url: "#", description: "Mouse", icon: <SiLogitech className="text-blue-700" /> },
-        { name: "Bose Headphone 700", url: "#", description: "Bluetooth headphones (cheap version)", icon: <FaHeadphones className="text-gray-600" /> },
     ]
 };
 
@@ -64,21 +53,21 @@ const AboutSection = () => {
                     <a href="#" class="text-blue-500 underline mb-2">View Résumé</a>
                     <div class="flex items-center text-gray-700 dark:text-gray-200">
                         <MdEmail className='text-2xl' />
-                        <p>evavic44@gmail.com</p>
+                        <p>arifraza787898@gmail.com</p>
                     </div>
                 </div>
                 <div class="flex-1">
                     <h1 style={{
                         fontFamily: 'MyFont5, sans-serif'
-                    }} class="text-4xl font-medium text-gray-600 dark:text-gray-200 mb-4">I'm Victor Eke. I live in Lagos, where I build the future.</h1>
+                    }} class="text-4xl font-medium text-gray-600 dark:text-gray-200 mb-4">I'm muhammad Arif Raza. I live in Rawalpindi, where I build the future.</h1>
                     <p class="text-gray-700 dark:text-gray-200 mb-4">
-                        I am a self-driven, career-oriented software developer specializing in front-end development and open-source, currently pursuing a bachelors degree in computer science. My expertise lies in building interactive web applications on the client side. Primarily working with technologies like JavaScript, Next.js, TypeScript and Python.
+                        I am a self-driven, career-oriented software developer specializing in front-end and backend development, i have 2 years experience in Software Development. My expertise lies in building interactive web applications on the client side. Primarily working with technologies like JavaScript, Next.js, React js  and node js.
                     </p>
                     <p class="text-gray-700 dark:text-gray-200 mb-4">
                         I strongly believe in continuous learning and improving myself, so I try my best to learn in any situation possible, unfavorable or not.
                     </p>
                     <p class="text-gray-700 dark:text-gray-200 mb-6">
-                        Beyond learning, I enjoy writing technical articles and creating projects that both inspire and benefit fellow developers. You can find my recent posts on <a href="#" class="text-blue-500 underline">freeCodeCamp</a> and my personal blog <a href="#" class="text-blue-500 underline">hosted on this site</a>.
+                        Beyond learning, I enjoy writing technical articles and creating projects that both inspire and benefit fellow developers. You can find my recent posts on <a href="https://dev.to/muhammad_arifraza_78/how-to-create-a-github-repository-from-your-terminal-5fc9" class="text-blue-500 underline">dev.to</a> and my personal blog <a href="https://dev.to/muhammad_arifraza_78/how-to-create-a-github-repository-from-your-terminal-5fc9" class="text-blue-500 underline">hosted on this site</a>.
                     </p>
                     <div class="bg-gray-200 p-4 rounded-lg mb-6">
                         <img src={aboutsectionsvg} alt="Victor Eke" class="w-100 h-100 rounded-lg object-cover mb-4" />
@@ -95,7 +84,7 @@ const AboutSection = () => {
             <div class="max-w-6xl mx-auto p-6">
                 <h2 class="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-4">What I'm Currently Hacking on?</h2>
                 <p class="text-gray-700 dark:text-gray-200 mb-4">
-                    I'm still trying to wrap-up a few freelance projects but I took out time this week to work on the <a href="#" class="text-blue-500 underline">gdglagos hackathon</a>. It was a tireless 2-day marathon of coding and collaborating. In the end, we emerged the official winners.
+                    Currently, I am working at Healmb Solutions as a full-stack developer, focusing on building a scalable and efficient project. My primary responsibilities include developing the frontend using React.js and handling backend operations with Node.js. I am dedicated to delivering robust, high-performance solutions that meet both client and organizational goals. The project emphasizes scalability and adaptability, requiring innovative problem-solving and a keen eye for detail. This role allows me to leverage my skills while continuously learning and growing in a dynamic environment.
                 </p>
             </div>
             <div class="max-w-6xl mx-auto p-6">
@@ -107,20 +96,27 @@ const AboutSection = () => {
                 <ul class="space-y-4 list-disc list-inside">
                     <li class="font-medium text-gray-600 dark:text-gray-200">
 
-                        <span class="text-gray-800 dark:text-gray-200 font-semibold">Attention to detail:</span> I take pleasure in creating designs and UIs with careful precision, emphasizing quality over quantity.
+                        <span class="text-gray-800 dark:text-gray-200 font-semibold">Communication Skills: </span> Being able to explain complex technical concepts clearly to both technical and non-technical stakeholders is crucial. This includes verbal, written, and listening skills for effective team collaboration and client interactions.
 
                     </li>
                     <li class="font-medium text-gray-600 dark:text-gray-200">
 
-                        <span class="text-gray-800 dark:text-gray-200 font-semibold">Open-source/Collaboration:</span> I founded a community on GitHub called
-                        <a href="#" class="text-blue-600 underline">Communitypro</a> that helps newbie developers learn how to contribute to open-source projects and collaborate in building together. Currently, we are over
-                        <a href="#" class="text-blue-600 underline">400</a> people strong with room for growth.
+                        <span class="text-gray-800 dark:text-gray-200 font-semibold">Problem-Solving :</span>  Strong analytical thinking and creativity are essential for diagnosing issues, troubleshooting, and developing innovative solutions. You should be able to break down problems into manageable parts and think critically about how to solve them.
 
                     </li>
                     <li class="font-medium dark:text-gray-200 text-gray-600">
 
                         <span class="text-gray-800 dark:text-gray-200 font-semibold">Ability to work with little supervision:</span> I understand people are busy and would love to get things done timely, so I do my best in delivering assignments and projects with little supervision, sparing you the need to closely manage/oversee my work.
 
+                    </li>
+                    <li class="font-medium dark:text-gray-200 text-gray-600">
+                        <span class="text-gray-800 dark:text-gray-200 font-semibold">Teamwork and Collaboration :</span> Working well with other developers, designers, and product teams is key in delivering successful projects. Being open to feedback, assisting colleagues, and working harmoniously in group settings are essential for team dynamics.
+                    </li>
+                    <li class="font-medium dark:text-gray-200 text-gray-600">
+                        <span class="text-gray-800 dark:text-gray-200 font-semibold">Adaptability and Learning Agility: </span> The tech landscape changes rapidly, so the ability to learn new technologies and adapt to evolving tools and frameworks is invaluable. Embrace change and continuously improve your skill set to stay competitive.
+                    </li>
+                    <li class="font-medium dark:text-gray-200 text-gray-600">
+                        <span class="text-gray-800 dark:text-gray-200 font-semibold">Time Management and Prioritization :</span> Software development projects often come with tight deadlines and multiple tasks. Managing your time effectively, knowing how to prioritize tasks, and ensuring you meet deadlines without sacrificing quality are important for career success.
                     </li>
                 </ul>
             </div>
@@ -185,24 +181,7 @@ const AboutSection = () => {
                         ))}
                     </ul>
                 </div>
-                <div class="max-w-6xl mx-auto py-6">
-                    <h2 style={{
-                        fontFamily: 'MyFont5, sans-serif'
-                    }} className="text-2xl font-medium text-gray-800 dark:text-gray-200 mb-4">hardware</h2>
-                    <ul className="space-y-3">
-                        {items.hardware?.map((tech, index) => (
-                            <li key={index} className="flex items-center">
-                                <span className="w-6 h-6 text-xl mr-2">
-                                    {tech.icon}
-                                </span>
-                                <a href={tech.url} className="text-blue-600 font-semibold hover:underline">
-                                    {tech.name}
-                                </a>
-                                <span className="text-gray-600 ml-2 dark:text-gray-200">- {tech.description}</span>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+
             </div>
         </div>
     )

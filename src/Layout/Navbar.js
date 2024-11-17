@@ -99,11 +99,11 @@ const Navbar = () => {
             {/* Mobile Menu */}
             {isMenuOpen && (
                 <div className="lg:hidden absolute top-20 left-0 w-full bg-white dark:bg-[#2d2d2d] bg-noice py-4 px-6 shadow-md space-y-4 text-center">
-                    <Link to="/" className={`block ${isActive('/') ? 'text-blue-600' : 'hover:text-gray-400 dark:hover:text-gray-200'}`}>Home</Link>
-                    <Link to="/about" className={`block ${isActive('/about') ? 'text-blue-600' : 'hover:text-gray-400 dark:hover:text-gray-200'}`}>About</Link>
-                    <Link to="/projects-page" className={` block ${isActive('/projects-page') ? 'text-blue-600' : 'hover:text-gray-400 dark:hover:text-gray-200'}`}>Projects</Link>
-                    <Link to="/blogs-page" className={`block ${isActive('/blogs-page') ? 'text-blue-600' : 'hover:text-gray-400 dark:hover:text-gray-200'}`}>Blog</Link>
-                    <Link to="/contactus-page" className={`block ${isActive('/contactus-page') ? 'text-blue-600' : 'hover:text-gray-400 dark:hover:text-gray-200'}`}>Contact</Link>
+                    <Link onClick={toggleMenu}  to="/" className={`block ${isActive('/') ? 'text-blue-600' : 'hover:text-gray-400 dark:hover:text-gray-200'}`}>Home</Link>
+                    <Link onClick={toggleMenu}  to="/about" className={`block ${isActive('/about') ? 'text-blue-600' : 'hover:text-gray-400 dark:hover:text-gray-200'}`}>About</Link>
+                    <Link onClick={toggleMenu}  to="/projects-page" className={` block ${isActive('/projects-page') ? 'text-blue-600' : 'hover:text-gray-400 dark:hover:text-gray-200'}`}>Projects</Link>
+                    <Link onClick={toggleMenu}  to="/blogs-page" className={`block ${isActive('/blogs-page') ? 'text-blue-600' : 'hover:text-gray-400 dark:hover:text-gray-200'}`}>Blog</Link>
+                    <Link onClick={toggleMenu}  to="/contactus-page" className={`block ${isActive('/contactus-page') ? 'text-blue-600' : 'hover:text-gray-400 dark:hover:text-gray-200'}`}>Contact</Link>
                 </div>
             )}
         </div>
