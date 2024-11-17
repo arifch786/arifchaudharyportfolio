@@ -70,7 +70,7 @@ const Blogs = () => {
         : BlogsData.filter(blog => blog.category === selectedCategory);
 
     return (
-        <div id='blogs-page' className="flex items-center justify-center min-h-[40vh] p-6 md:p-4 md:pt-20">
+        <div  className="flex items-center justify-center min-h-[40vh] p-6 md:p-4 md:pt-20">
             <div className="w-full max-w-6xl mx-auto">
                 <header>
                     <h1

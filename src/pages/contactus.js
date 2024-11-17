@@ -40,7 +40,7 @@ const ContactUs = () => {
     
 
     return (
-        <div id='contactus-pages' className='p-4'>
+        <div className='p-4'>
              <ToastContainer />
             <div className="mt-6">
                 <div className="grid sm:grid-cols-2  items-start gap-14 p-8 mx-auto max-w-4xl shadow-inner shadow-indigo-800 dark:shadow-indigo-800 rounded-md font-sans">
