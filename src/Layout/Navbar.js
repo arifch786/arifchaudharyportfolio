@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { TiInfinityOutline } from "react-icons/ti";
-import { FaBars, FaTimes } from "react-icons/fa"; // Importing hamburger and close icons
+import { FaBars, FaTimes } from "react-icons/fa"; 
 import { useLocation } from 'react-router-dom'; // React Router
 
 const Navbar = () => {
