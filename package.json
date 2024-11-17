@@ -6,9 +6,19 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "bootstrap": "^5.3.3",
+    "emailjs-com": "^3.2.0",
+    "framer-motion": "^11.11.17",
+    "github-calendar": "^2.3.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-github-calendar": "^4.5.1",
+    "react-icons": "^5.3.0",
+    "react-router-dom": "^6.28.0",
     "react-scripts": "5.0.1",
+    "react-toastify": "^10.0.6",
+    "react-transition-group": "^4.4.5",
+    "reactstrap": "^9.2.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -34,5 +44,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.14"
   }
 }
