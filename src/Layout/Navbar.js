@@ -33,7 +33,7 @@ const Navbar = () => {
     const isActive = (path) => location.pathname === path;
 
     return (
-<div className="sticky backdrop-blur-md top-0 z-50 text-black dark:text-white flex items-center justify-between py-6 px-4 md:px-48 border-b border-gray-300 dark:border-gray-800">            <div className="text-center text-xl" style={{ fontFamily: "'Brush Script MT', cursive" }}>
+<div className=" text-black dark:text-white flex items-center justify-between py-6 px-4 md:px-48 border-b border-gray-300 dark:border-gray-800">            <div className="text-center text-xl" style={{ fontFamily: "'Brush Script MT', cursive" }}>
                 <div className="bg-white rounded-sm dark:bg-gray-950 px-3 py-2 shadow-lg border border-gray-200 dark:border-gray-800 transition-all duration-300 ease-in-out transform hover:rotate-12 animate-fadeIn animate-bounceOnce">
                     <a href="/" className="text-blue-600 dark:text-blue-300 font-semibold">Arif.</a>
                 </div>
