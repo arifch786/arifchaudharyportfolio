@@ -89,7 +89,7 @@ const Blogs = () => {
                             <button
                                 key={index}
                                 onClick={() => setSelectedCategory(category)}
-                                className={`px-4 py-2 rounded-full transition-all duration-300 ease-in-out ${
+                                className={`px-4 py-2 my-5 rounded-full transition-all duration-300 ease-in-out ${
                                     selectedCategory === category
                                         ? "bg-blue-600 text-white"
                                         : "bg-gray-200 text-gray-800"
@@ -101,7 +101,7 @@ const Blogs = () => {
                     </div>
                 </section>
                 <section>
-                    <div className="grid grid-cols-1 gap-6 max-w-4xl">
+                    <div className="grid grid-cols-1 gap-6 max-w-4xl mt-20">
                         {filteredBlogs.map((data, index) => (
                             <a
                                 href={data.link}
