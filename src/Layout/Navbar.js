@@ -30,7 +30,6 @@ const Navbar = () => {
         setIsMenuOpen((prev) => !prev);
     };
 
-    // Helper function to check if a path is active
     const isActive = (path) => location.pathname === path;
 
     return (
