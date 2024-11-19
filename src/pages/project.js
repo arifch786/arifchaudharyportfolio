@@ -22,7 +22,7 @@ const Project = () => {
         const tl = gsap.timeline({
             defaults: { duration: 1, ease: "power4.out" },
         });
-    
+
         // Fade and scale in each project card with stagger
         tl.fromTo(
             projectRef.current,
@@ -34,7 +34,7 @@ const Project = () => {
                 stagger: { amount: 0.5, from: "start" },
             }
         );
-    
+
         // Rotate in images with a more fluid effect
         tl.fromTo(
             projectRef.current.map((el) => el.querySelector("img")),
@@ -42,7 +42,7 @@ const Project = () => {
             { rotateY: 0, opacity: 1, duration: 0.3, stagger: 0.2 },
             "-=0.8" // Start overlapping with the previous animation
         );
-    
+
         // Optional hover effects with GSAP
         projectRef.current.forEach((card) => {
             gsap.fromTo(
@@ -62,7 +62,7 @@ const Project = () => {
                     },
                 }
             );
-    
+
             card.addEventListener("mouseenter", () => {
                 gsap.to(card, { scale: 1.05, duration: 0.4, ease: "power1.inOut" });
             });
@@ -70,16 +70,16 @@ const Project = () => {
                 gsap.to(card, { scale: 1, duration: 0.4, ease: "power1.inOut" });
             });
         });
-    
+
         return () => {
             // Clean up GSAP animations to avoid memory leaks
             projectRef.current.forEach((card) => {
-                card.removeEventListener("mouseenter", () => {});
-                card.removeEventListener("mouseleave", () => {});
+                card.removeEventListener("mouseenter", () => { });
+                card.removeEventListener("mouseleave", () => { });
             });
         };
     }, []);
-    
+
 
     const projectData = [
         {
@@ -156,35 +156,35 @@ const Project = () => {
                     </p>
                     <div className="grid shadow-2xl shadow-green-400 dark:shadow-green-400 p-5 rounded-2xl grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                         {projectData.map((data, index) => (
-                           
-                                  <motion.article
-                                    key={data.id}
-                                    ref={addToRefs}
-                                    className="rounded-lg p-4 transition-all duration-300 ease-in-out m-2"
-                                    initial={{ boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)" }}
-                                    animate={{
-                                        boxShadow: [
-                                            "0px 0px 20px 4px rgba(255, 0, 150, 0.4)",
-                                            "0px 0px 20px 4px rgba(0, 204, 255, 0.4)",
-                                            "0px 0px 20px 4px rgba(0, 255, 153, 0.4)",
-                                            "0px 0px 20px 4px rgba(255, 255, 0, 0.4)"
-                                        ],
-                                    }}
-                                    transition={{
-                                        duration: 1,
-                                        repeat: Infinity,
-                                        repeatType: "mirror"
-                                    }}
-                                >
+
+                            <motion.article
+                                key={data.id}
+                                ref={addToRefs}
+                                className="rounded-lg p-6 transition-all duration-300 ease-in-out m-2"
+                                initial={{ boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)" }}
+                                animate={{
+                                    boxShadow: [
+                                        "0px 0px 20px 4px rgba(255, 0, 150, 0.4)",
+                                        "0px 0px 20px 4px rgba(0, 204, 255, 0.4)",
+                                        "0px 0px 20px 4px rgba(0, 255, 153, 0.4)",
+                                        "0px 0px 20px 4px rgba(255, 255, 0, 0.4)"
+                                    ],
+                                }}
+                                transition={{
+                                    duration: 0.5,
+                                    repeat: Infinity,
+                                    repeatType: "mirror"
+                                }}
+                            >
                                 <div className="flex flex-col items-center text-center">
-                                <div className="bg-gray-100 border-gray-300 logo p-3 my-4 flex justify-center rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out shadow-slate-300 border-2 relative">
-                                    <img
-                                        src={data?.image}
-                                        alt="Profile Image"
-                                        style={{ height: "60px", width: "60px" }}
-                                        className="rounded-md transition-transform duration-300 ease-in-out hover:rotate-180 hover:hue-rotate-180"
-                                    />
-                                </div>
+                                    <div className="bg-gray-100 border-gray-300 logo p-3 my-4 flex justify-center rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out shadow-slate-300 border-2 relative">
+                                        <img
+                                            src={data?.image}
+                                            alt="Profile Image"
+                                            style={{ height: "60px", width: "60px" }}
+                                            className="rounded-md transition-transform duration-300 ease-in-out hover:rotate-180 hover:hue-rotate-180"
+                                        />
+                                    </div>
                                     <div>
                                         <h2 className="text-lg font-semibold text-gray-700 dark:text-gray-300">
                                             {data.company}
@@ -202,7 +202,7 @@ const Project = () => {
                                         </a>
                                     </div>
                                 </div>
-                                </motion.article>
+                            </motion.article>
                         ))}
                     </div>
                 </section>

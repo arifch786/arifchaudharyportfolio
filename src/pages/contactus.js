@@ -3,6 +3,7 @@ import emailjs from 'emailjs-com';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
+import { motion } from 'framer-motion';
 
 const ContactUs = () => {
     const [formData, setFormData] = useState({
@@ -37,14 +38,30 @@ const ContactUs = () => {
                 toast.error('Failed to send email. Please try again.');
             });
     };
-    
+
 
     return (
         <div className='p-4'>
-             <ToastContainer />
+            <ToastContainer />
             <div className="mt-6">
-                <div className="grid sm:grid-cols-2  items-start gap-14 p-8 mx-auto max-w-4xl shadow-inner shadow-indigo-800 dark:shadow-indigo-800 rounded-md font-sans">
-                    
+
+                <motion.article
+                    className="grid sm:grid-cols-2  items-start gap-14 p-8 mx-auto max-w-4xl shadow-inner shadow-indigo-800 dark:shadow-indigo-800 rounded-md font-sans"
+                    initial={{ boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)" }}
+                    animate={{
+                        boxShadow: [
+                            "0px 0px 20px 4px rgba(0, 0, 255, 0.4)",   // Bright blue
+                            "0px 0px 20px 4px rgba(0, 51, 204, 0.4)",   // Deep blue
+                            "0px 0px 20px 4px rgba(51, 153, 255, 0.4)", // Light sky blue
+                            "0px 0px 20px 4px rgba(102, 204, 255, 0.4)" // Soft light blue
+                        ],
+                    }}
+                    transition={{
+                        duration: 0.5,
+                        repeat: Infinity,
+                        repeatType: "mirror"
+                    }}
+                >
                     <div className=''>
                         <h1 class="text-gray-800 dark:text-gray-100 text-3xl font-extrabold">Let's Talk</h1>
                         <p class="text-sm text-gray-500 mt-4">Have some big idea or brand to develop and need help? Then reach out we'd love to hear about your project  and provide help.</p>
@@ -63,7 +80,7 @@ const ContactUs = () => {
                                     </div>
                                     <a href="javascript:void(0)" class="text-[#007bff] text-sm ml-4">
                                         <small class="block">Mail</small>
-                                        <strong>info@example.com</strong>
+                                        <strong>arifraza787898@gmail.com</strong>
                                     </a>
                                 </li>
                             </ul>
@@ -147,7 +164,7 @@ const ContactUs = () => {
                         </button>
                         {status && <p className="mt-4 text-sm text-gray-600">{status}</p>}
                     </form>
-                </div>
+                </motion.article>
             </div>
         </div>
     );

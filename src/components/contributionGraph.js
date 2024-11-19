@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { motion } from 'framer-motion';
+
 
 const ContributionGraph = () => {
     const years = [2024, 2023, 2022, 2021, 2020];
@@ -37,7 +39,24 @@ const ContributionGraph = () => {
              <h1 class=" text-3xl text-gray-600 dark:text-gray-100 pb-4" style={{
                 fontFamily: 'MyFont3, sans-serif'
             }}>Contribution Graph</h1>
-            <div className="flex flex-col lg:flex-row  p-4 shadow-inner  shadow-green-500 dark:shadow-green-600 rounded-lg w-full max-w-6xl">
+           
+             <motion.article
+            className="p-4 shadow-inner flex flex-col lg:flex-row  w-full max-w-6xl  shadow-green-500 dark:shadow-green-600 rounded-lg"
+            initial={{ boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)" }}
+            animate={{
+              boxShadow: [
+                "0px 0px 20px 4px rgba(0, 255, 0, 0.4)",   // Bright green
+                "0px 0px 20px 4px rgba(0, 204, 0, 0.4)",   // Darker green
+                "0px 0px 20px 4px rgba(51, 204, 51, 0.4)", // Light green
+                "0px 0px 20px 4px rgba(102, 255, 102, 0.4)" // Soft pastel green
+              ],
+            }}
+            transition={{
+              duration: 0.5,
+              repeat: Infinity,
+              repeatType: "mirror"
+            }}
+          >
                 <div className="shadow-lg rounded-lg p-4 w-full">
                     {/* Month Labels */}
                     <div className="overflow-x-auto xl:overflow-hidden">
@@ -109,8 +128,12 @@ const ContributionGraph = () => {
                         </button>
                     ))}
                 </div>
+                </motion.article>
             </div>
-        </div>
+       
+
+           
+       
     );
 };
 
