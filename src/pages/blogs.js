@@ -101,7 +101,7 @@ const Blogs = () => {
                     </div>
                 </section>
                 <section>
-                    <div className="grid grid-cols-1 gap-6 max-w-4xl mt-20">
+                    <div className="grid grid-cols-1 gap-6 shadow-2xl shadow-green-400 dark:shadow-green-400 p-5 rounded-2xl max-w-4xl mt-20">
                         {filteredBlogs.map((data, index) => (
                             <a
                                 href={data.link}
@@ -110,7 +110,7 @@ const Blogs = () => {
                             >
                                 <motion.article
                                     key={index}
-                                    className="rounded-lg p-4 transition-all duration-300 ease-in-out"
+                                    className="rounded-lg p-4 transition-all  duration-300 ease-in-out"
                                     initial={{ boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)" }}
                                     animate={{
                                         boxShadow: [

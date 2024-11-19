@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { motion } from 'framer-motion';
+
 
 const ContributionGraph = () => {
     const years = [2024, 2023, 2022, 2021, 2020];
@@ -37,7 +39,25 @@ const ContributionGraph = () => {
              <h1 class=" text-3xl text-gray-600 dark:text-gray-100 pb-4" style={{
                 fontFamily: 'MyFont3, sans-serif'
             }}>Contribution Graph</h1>
-            <div className="flex flex-col lg:flex-row  p-4 shadow-inner shadow-indigo-800 dark:shadow-indigo-800 rounded-lg w-full max-w-6xl">
+             <motion.article
+                                    
+                                    className="rounded-lg p-4 transition-all duration-300 ease-in-out"
+                                    initial={{ boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)" }}
+                                    animate={{
+                                        boxShadow: [
+                                            "0px 0px 20px 4px rgba(255, 0, 150, 0.4)",
+                                            "0px 0px 20px 4px rgba(0, 204, 255, 0.4)",
+                                            "0px 0px 20px 4px rgba(0, 255, 153, 0.4)",
+                                            "0px 0px 20px 4px rgba(255, 255, 0, 0.4)"
+                                        ],
+                                    }}
+                                    transition={{
+                                        duration: 0.5,
+                                        repeat: Infinity,
+                                        repeatType: "mirror"
+                                    }}
+                                >
+            <div className="flex flex-col lg:flex-row  p-4 shadow-2xl shadow-green-400 dark:shadow-green-400 rounded-lg w-full max-w-6xl">
                 <div className="shadow-lg rounded-lg p-4 w-full">
                     {/* Month Labels */}
                     <div className="overflow-x-auto xl:overflow-hidden">
@@ -110,6 +130,7 @@ const ContributionGraph = () => {
                     ))}
                 </div>
             </div>
+            </motion.article>
         </div>
     );
 };

@@ -154,7 +154,7 @@ const Project = () => {
                         are the ones that I'm most proud of. Many are open-source—
                         feel free to explore and contribute!
                     </p>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid shadow-2xl shadow-green-400 dark:shadow-green-400 p-5 rounded-2xl grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                         {projectData.map((data, index) => (
                            
                                   <motion.article

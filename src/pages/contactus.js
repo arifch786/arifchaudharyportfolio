@@ -44,6 +44,7 @@ const ContactUs = () => {
              <ToastContainer />
             <div className="mt-6">
                 <div className="grid sm:grid-cols-2  items-start gap-14 p-8 mx-auto max-w-4xl shadow-inner shadow-indigo-800 dark:shadow-indigo-800 rounded-md font-sans">
+                    
                     <div className=''>
                         <h1 class="text-gray-800 dark:text-gray-100 text-3xl font-extrabold">Let's Talk</h1>
                         <p class="text-sm text-gray-500 mt-4">Have some big idea or brand to develop and need help? Then reach out we'd love to hear about your project  and provide help.</p>
