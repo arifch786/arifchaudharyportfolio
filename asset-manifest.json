@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/arifchaudharyportfolio/static/css/main.7cee40ab.css",
-    "main.js": "/arifchaudharyportfolio/static/js/main.de564e6f.js",
+    "main.js": "/arifchaudharyportfolio/static/js/main.3102f21a.js",
     "static/media/auction.png": "/arifchaudharyportfolio/static/media/auction.23449c2faf460b5d60e2.png",
     "static/media/blogimg7.jpg": "/arifchaudharyportfolio/static/media/blogimg7.76810045594d29fedc3f.jpg",
     "static/media/lcc.png": "/arifchaudharyportfolio/static/media/lcc.43344398322a0613aef7.png",
@@ -25,10 +25,10 @@
     "index.html": "/arifchaudharyportfolio/index.html",
     "static/media/About _ Victor Eke-8.svg": "/arifchaudharyportfolio/static/media/About _ Victor Eke-8.b33d48e5e42a770c03cb6139b3dc4381.svg",
     "main.7cee40ab.css.map": "/arifchaudharyportfolio/static/css/main.7cee40ab.css.map",
-    "main.de564e6f.js.map": "/arifchaudharyportfolio/static/js/main.de564e6f.js.map"
+    "main.3102f21a.js.map": "/arifchaudharyportfolio/static/js/main.3102f21a.js.map"
   },
   "entrypoints": [
     "static/css/main.7cee40ab.css",
-    "static/js/main.de564e6f.js"
+    "static/js/main.3102f21a.js"
   ]
 }
