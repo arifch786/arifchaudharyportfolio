@@ -1,12 +1,19 @@
 import React, { useEffect, useRef } from "react";
 import image1 from "../assets/images/projectsimages/healmb.webp";
-import image2 from "../assets/images/projectsimages/workgen.png";
 import image3 from "../assets/images/projectsimages/logohmb.png";
-import image4 from "../assets/images/projectsimages/aws.png";
-import image5 from "../assets/images/projectsimages/chatwebapp.jpg";
+import image6 from "../assets/images/projectsimages/auction.png";
+import image7 from "../assets/images/projectsimages/logocoo.png";
+import image8 from "../assets/images/projectsimages/translation2.png";
+import image9 from "../assets/images/projectsimages/lcc.png";
+import image11 from "../assets/images/projectsimages/cardmate2.png";
+import image12 from "../assets/images/projectsimages/aimhalal.png";
+
 import { motion } from 'framer-motion';
 
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Project = () => {
     const projectRef = useRef([]);
@@ -19,63 +26,79 @@ const Project = () => {
     };
 
     useEffect(() => {
-        const tl = gsap.timeline({
-            defaults: { duration: 1, ease: "power4.out" },
-        });
+        // Refresh ScrollTrigger to ensure correct positions
+        ScrollTrigger.refresh();
 
-        // Fade and scale in each project card with stagger
-        tl.fromTo(
+        // Header Reveal
+        gsap.fromTo(
+            ".projects-header",
+            { opacity: 0, y: -40, filter: "blur(10px)" },
+            {
+                opacity: 1,
+                y: 0,
+                filter: "blur(0px)",
+                duration: 1.2,
+                ease: "power4.out",
+                scrollTrigger: {
+                    trigger: ".projects-header",
+                    start: "top 85%",
+                }
+            }
+        );
+
+        // Cards Staggered Reveal
+        gsap.fromTo(
             projectRef.current,
-            { opacity: 0, y: 50, scale: 0.9 },
+            {
+                opacity: 0,
+                y: 40,
+                scale: 0.95,
+                filter: "blur(8px)"
+            },
             {
                 opacity: 1,
                 y: 0,
                 scale: 1,
-                stagger: { amount: 0.5, from: "start" },
+                filter: "blur(0px)",
+                duration: 1,
+                stagger: 0.15,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: ".projects-grid",
+                    start: "top 80%",
+                }
             }
         );
 
-        // Rotate in images with a more fluid effect
-        tl.fromTo(
-            projectRef.current.map((el) => el.querySelector("img")),
-            { rotateY: 45, opacity: 0 },
-            { rotateY: 0, opacity: 1, duration: 0.3, stagger: 0.2 },
-            "-=0.8" // Start overlapping with the previous animation
-        );
-
-        // Optional hover effects with GSAP
+        // Hover effects with GSAP refined
         projectRef.current.forEach((card) => {
-            gsap.fromTo(
-                card,
-                { scale: 1 },
-                {
-                    scale: 1.05,
-                    duration: 0.4,
-                    ease: "power1.inOut",
-                    paused: true,
-                    overwrite: "auto",
-                    onStart() {
-                        gsap.set(card, { zIndex: 1 }); // Raise on hover
-                    },
-                    onReverseComplete() {
-                        gsap.set(card, { zIndex: 0 }); // Reset zIndex
-                    },
-                }
-            );
-
             card.addEventListener("mouseenter", () => {
-                gsap.to(card, { scale: 1.05, duration: 0.4, ease: "power1.inOut" });
+                gsap.to(card, {
+                    y: -10,
+                    scale: 1.02,
+                    duration: 0.3,
+                    ease: "power2.out",
+                    boxShadow: "0 25px 50px rgba(39, 177, 115, 0.12)"
+                });
             });
             card.addEventListener("mouseleave", () => {
-                gsap.to(card, { scale: 1, duration: 0.4, ease: "power1.inOut" });
+                gsap.to(card, {
+                    y: 0,
+                    scale: 1,
+                    duration: 0.3,
+                    ease: "power2.out",
+                    boxShadow: "0 10px 30px rgba(0, 0, 0, 0.05)"
+                });
             });
         });
 
         return () => {
-            // Clean up GSAP animations to avoid memory leaks
+            ScrollTrigger.getAll().forEach(t => t.kill());
             projectRef.current.forEach((card) => {
-                card.removeEventListener("mouseenter", () => { });
-                card.removeEventListener("mouseleave", () => { });
+                if (card) {
+                    card.removeEventListener("mouseenter", () => { });
+                    card.removeEventListener("mouseleave", () => { });
+                }
             });
         };
     }, []);
@@ -83,26 +106,74 @@ const Project = () => {
 
     const projectData = [
         {
-            id: 1,
+            id: 4,
             company: "Hmb Solutions Pvt. Ltd.",
-            project: "healMB",
-            link: "https://connect.healmb.com/",
+            project: "healmindbody Connect",
+            link: "https://connecthmb.com/",
             role: "Frontend Developer",
-            date: "March, 2023 - Present",
-            description:
-                "As a Full Stack Developer, I am responsible for designing and implementing scalable and user-friendly web applications. I handle both frontend and backend development, ensuring seamless integration of intuitive interfaces with efficient server-side logic.",
+            date: "2023 - Present",
+            description: "Worked on connecting users with mental and physical wellbeing resources through an intuitive web platform.",
+            image: image7,
+        },
+        {
+            id: 10,
+            company: "AimHalal",
+            project: "AimHalal",
+            link: "https://aimhalal.com/",
+            role: "Frontend Developer",
+            date: "2025",
+            description: "Built the AimHalal platform to help users find halal products and services with an intuitive browsing experience.",
+            image: image12,
+        },
+        {
+            id: 5,
+            company: "Hmb Solutions Pvt. Ltd.",
+            project: "AuctionIntel",
+            link: "https://auctionintel.co.uk/",
+            role: "Frontend Developer",
+            date: "2024",
+            description: "Built and optimized user interfaces for an auction insights platform focused on delivering data and analytics.",
+            image: image6,
+        },
+        {
+            id: 6,
+            company: "Hmb Solutions Pvt. Ltd.",
+            project: "Heal Mind and Body",
+            link: "https://healmb.com/",
+            role: "Frontend Developer",
+            date: "2024",
+            description: "Developed interactive and responsive frontend components for the Heal Mind and Body wellness website.",
             image: image1,
         },
         {
-            id: 2,
-            company: "Work Generations Pvt. Ltd.",
-            project: "WYSEBYSE",
-            link: "https://www.wysebyse.com/",
-            role: "Front End Developer",
-            date: "December 15, 2022 - March 10, 2023",
-            description:
-                "As a Frontend Developer intern, I focused on creating visually appealing and responsive user interfaces using HTML, CSS, and JavaScript.",
-            image: image2,
+            id: 7,
+            company: "Hmb Solutions Pvt. Ltd.",
+            project: "Translation App",
+            link: "https://play.google.com/store/apps/details?id=com.translatornow&hl=en",
+            role: "Mobile App Developer",
+            date: "2024",
+            description: "Developed a mobile translation app with real-time language support and clean UX for global users.",
+            image: image8,
+        },
+        {
+            id: 8,
+            company: "Hmb Solutions Pvt. Ltd.",
+            project: "LCC Cricket Academy",
+            link: "https://play.google.com/store/apps/details?id=com.lccshotgunsversion01&hl=en",
+            role: "Mobile App Developer",
+            date: "2024",
+            description: "Created an Android cricket academy app featuring training schedules, updates and interactive features for players and coaches.",
+            image: image9,
+        },
+        {
+            id: 9,
+            company: "Hmb Solutions Pvt. Ltd.",
+            project: "CardMate",
+            link: "",
+            role: "Frontend Developer",
+            date: "In Progress",
+            description: "Currently developing the CardMate project focused on seamless digital card management solutions.",
+            image: image11,
         },
         {
             id: 3,
@@ -110,95 +181,66 @@ const Project = () => {
             project: "healMindAndBody",
             link: "https://arifch786.github.io/healmbwebsite/",
             role: "Frontend Developer",
-            date: "March, 2023 - Present",
-            description:
-                "As a Frontend Developer, I am responsible for designing and user-friendly web applications developing with a focus on user experience.",
+            date: "March, 2024",
+            description: "As a Frontend Developer, I am responsible for designing user-friendly web applications with a focus on user experience.",
             image: image3,
         },
-        {
-            id: 4,
-            company: "Hmb Solutions Pvt. Ltd.",
-            role: "Cloud Services",
-            date: "May, 2024 - Present",
-            description:
-                "As part of deployment responsibilities, I configured and deployed frontend applications on AWS Amplify, ensuring seamless hosting and continuous deployment pipelines.",
-            image: image4,
-        },
-        {
-            id: 5,
-            company: "Freelancing Project",
-            role: "Full Stack Developer",
-            date: "Jan 5, 2024 - Mar 9, 2024",
-            description:
-                "As a Full Stack Developer for a chat web app, I designed and implemented both the frontend and backend, ensuring a seamless user experience.",
-            image: image5,
-        },
+
     ];
 
     return (
-        <div className="flex items-center justify-center min-h-[40vh] p-6 md:p-4 md:pt-20">
-            <div className="w-full max-w-6xl mx-auto">
-                <header>
+        <div className="flex items-center justify-center min-h-screen p-6 md:p-12 md:pt-32 bg-transparent">
+            <div className="w-full max-w-7xl mx-auto">
+                <header className="projects-header mb-20 text-center space-y-4">
                     <h1
-                        style={{
-                            fontFamily: "MyFont5",
-                        }}
-                        className="text-5xl font-bold mb-6 text-center"
+                        style={{ fontFamily: "MyFont5" }}
+                        className="text-6xl md:text-8xl font-black text-gray-900 dark:text-white"
                     >
-                        Projects
+                        Projects<span className="text-[#27b173]">.</span>
                     </h1>
-                </header>
-                <section>
-                    <p className="mb-8 text-gray-800 dark:text-gray-200 text-center">
-                        I've worked on tons of projects over the years, but these
-                        are the ones that I'm most proud of. Many are open-source—
-                        feel free to explore and contribute!
+                    <p className="max-w-2xl mx-auto text-xl text-gray-600 dark:text-gray-400 font-medium leading-relaxed">
+                        A curated showcase of engineering excellence and digital innovation.
                     </p>
-                    <div className="grid shadow-2xl shadow-green-400 dark:shadow-green-400 p-5 rounded-2xl grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {projectData.map((data, index) => (
+                </header>
 
+                <section className="projects-grid">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                        {projectData.map((data) => (
                             <motion.article
                                 key={data.id}
                                 ref={addToRefs}
-                                className="rounded-lg p-6 transition-all duration-300 ease-in-out m-2"
-                                initial={{ boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)" }}
-                                animate={{
-                                    boxShadow: [
-                                        "0px 0px 20px 4px rgba(255, 0, 150, 0.4)",
-                                        "0px 0px 20px 4px rgba(0, 204, 255, 0.4)",
-                                        "0px 0px 20px 4px rgba(0, 255, 153, 0.4)",
-                                        "0px 0px 20px 4px rgba(255, 255, 0, 0.4)"
-                                    ],
-                                }}
-                                transition={{
-                                    duration: 0.5,
-                                    repeat: Infinity,
-                                    repeatType: "mirror"
-                                }}
+                                className="glass rounded-[3rem] p-10 flex flex-col items-center text-center group border border-gray-200 dark:border-white/5"
                             >
-                                <div className="flex flex-col items-center text-center">
-                                    <div className="bg-gray-100 border-gray-300 logo p-3 my-4 flex justify-center rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out shadow-slate-300 border-2 relative">
-                                        <img
-                                            src={data?.image}
-                                            alt="Profile Image"
-                                            style={{ height: "60px", width: "60px" }}
-                                            className="rounded-md transition-transform duration-300 ease-in-out hover:rotate-180 hover:hue-rotate-180"
-                                        />
-                                    </div>
-                                    <div>
-                                        <h2 className="text-lg font-semibold text-gray-700 dark:text-gray-300">
-                                            {data.company}
-                                        </h2>
-                                        <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                                            {data.description}
-                                        </p>
+                                <div className="bg-white/50 dark:bg-white/5 glass p-5 mb-8 flex justify-center rounded-[2rem] shadow-xl border border-white/20 dark:border-white/5 group-hover:rotate-[5deg] transition-transform duration-200">
+                                    <img
+                                        src={data?.image}
+                                        alt={data.project}
+                                        className="h-16 w-16 object-contain filter brightness-110"
+                                    />
+                                </div>
+
+                                <div className="space-y-4">
+                                    <h2 className="text-2xl font-black text-gray-900 dark:text-white">
+                                        {data.project}
+                                    </h2>
+                                    <p className="text-[#27b173] text-[10px] font-black uppercase tracking-widest bg-[#27b173]/10 px-4 py-1.5 rounded-full inline-block">
+                                        {data.company}
+                                    </p>
+                                    <p className="text-base text-gray-600 dark:text-gray-400 font-medium leading-relaxed">
+                                        {data.description}
+                                    </p>
+
+                                    <div className="pt-6">
                                         <a
                                             href={data.link}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="text-blue-500 mt-4 inline-block underline"
+                                            className="inline-flex items-center gap-2 text-gray-900 dark:text-white font-black text-sm uppercase tracking-widest border-b-2 border-[#27b173] pb-1 hover:text-[#27b173] transition-colors"
                                         >
-                                            View Project
+                                            View Case Study
+                                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                            </svg>
                                         </a>
                                     </div>
                                 </div>
@@ -210,5 +252,6 @@ const Project = () => {
         </div>
     );
 };
+
 
 export default Project;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import { motion } from 'framer-motion';
 
 
@@ -12,18 +12,36 @@ const ContributionGraph = () => {
     const isLeapYear = (year) => (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
     if (isLeapYear(selectedYear)) daysInMonth[1] = 29;
 
-    // Generate dummy data for contributions, distributed over 365 days
-    const contributions = Array.from({ length: 365 }, () =>
+    // Memoize dummy data for contributions to prevent re-randomizing and re-calculating on every render
+    const contributions = useMemo(() => Array.from({ length: 365 }, () =>
         Math.floor(Math.random() * 5)
-    );
+    ), [selectedYear]);
 
     // Split contributions data into months based on daysInMonth
-    let dayIndex = 0;
-    const monthlyContributions = daysInMonth.map((days) => {
-        const monthData = contributions.slice(dayIndex, dayIndex + days);
-        dayIndex += days;
-        return monthData;
-    });
+    const monthlyContributions = useMemo(() => {
+        let dayIndex = 0;
+        return daysInMonth.map((days) => {
+            const monthData = contributions.slice(dayIndex, dayIndex + days);
+            dayIndex += days;
+            return monthData;
+        });
+    }, [contributions, daysInMonth]);
+
+    // Animation variants for staggered grid
+    const containerGrid = {
+        hidden: { opacity: 0 },
+        show: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.005
+            }
+        }
+    };
+
+    const itemGrid = {
+        hidden: { opacity: 0, scale: 0.5 },
+        show: { opacity: 1, scale: 1 }
+    };
 
     // Define color classes based on contribution count
     const getColorClass = (count) => [
@@ -35,105 +53,97 @@ const ContributionGraph = () => {
     ][count];
 
     return (
-        <div className="flex flex-col items-center min-h-[40vh] p-4">
-             <h1 class=" text-3xl text-gray-600 dark:text-gray-100 pb-4" style={{
-                fontFamily: 'MyFont3, sans-serif'
-            }}>Contribution Graph</h1>
-           
-             <motion.article
-            className="p-4 shadow-inner flex flex-col lg:flex-row  w-full max-w-6xl  shadow-green-500 dark:shadow-green-600 rounded-lg"
-            initial={{ boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)" }}
-            animate={{
-              boxShadow: [
-                "0px 0px 20px 4px rgba(0, 255, 0, 0.4)",   // Bright green
-                "0px 0px 20px 4px rgba(0, 204, 0, 0.4)",   // Darker green
-                "0px 0px 20px 4px rgba(51, 204, 51, 0.4)", // Light green
-                "0px 0px 20px 4px rgba(102, 255, 102, 0.4)" // Soft pastel green
-              ],
-            }}
-            transition={{
-              duration: 0.5,
-              repeat: Infinity,
-              repeatType: "mirror"
-            }}
-          >
-                <div className="shadow-lg rounded-lg p-4 w-full">
-                    {/* Month Labels */}
-                    <div className="overflow-x-auto xl:overflow-hidden">
-                        <div className="grid grid-cols-12 gap-1 text-center text-gray-700 dark:text-gray-300 text-sm mb-2 min-w-[1000px]">
-                            <span>Jan</span>
-                            <span>Feb</span>
-                            <span>Mar</span>
-                            <span>Apr</span>
-                            <span>May</span>
-                            <span>Jun</span>
-                            <span>Jul</span>
-                            <span>Aug</span>
-                            <span>Sep</span>
-                            <span>Oct</span>
-                            <span>Nov</span>
-                            <span>Dec</span>
-                        </div>
-                        {/* Contribution Grid */}
-                        <div>
-                            <div className="grid grid-cols-12 gap-1 min-w-[1000px]">
-                                {monthlyContributions.map((monthData, monthIndex) => (
-                                    <div key={monthIndex} className="grid grid-cols-4 gap-1">
-                                        {monthData.map((count, dayIndex) => (
-                                            <div
-                                                key={dayIndex}
-                                                className={`w-3 h-3 md:w-4 md:h-4 rounded ${getColorClass(count)}`}
-                                            ></div>
+        <div className="flex flex-col items-center py-20 px-6 max-w-7xl mx-auto w-full" style={{ fontFamily: 'Outfit, sans-serif' }}>
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="w-full space-y-8"
+            >
+                <div className="text-center space-y-2">
+                    <h2 className="text-3xl font-bold text-gray-900 dark:text-white" style={{ fontFamily: 'MyFont5' }}>
+                        Activity Feed
+                    </h2>
+                    <p className="text-gray-500 dark:text-gray-400">Monthly contributions and code activity tracking.</p>
+                </div>
+
+                <div className="glass rounded-[2rem] border border-gray-200 dark:border-white/10 p-8 md:p-12 relative overflow-hidden group">
+                    <div className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-[#27b173] opacity-[0.01] rounded-full blur-[100px]"></div>
+
+                    <div className="flex flex-col lg:flex-row gap-12">
+                        <div className="flex-grow space-y-8">
+                            {/* Month Labels */}
+                            <div className="overflow-x-auto pb-4 scrollbar-hide">
+                                <div className="min-w-[800px] space-y-4">
+                                    <div className="grid grid-cols-12 gap-2 text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500 px-1">
+                                        {["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"].map(m => <span key={m}>{m}</span>)}
+                                    </div>
+
+                                    {/* Contribution Grid */}
+                                    <motion.div
+                                        className="grid grid-cols-12 gap-2 optimize-gpu"
+                                        variants={containerGrid}
+                                        initial="hidden"
+                                        whileInView="show"
+                                        viewport={{ once: true }}
+                                    >
+                                        {monthlyContributions.map((monthData, monthIndex) => (
+                                            <div key={monthIndex} className="grid grid-cols-4 gap-1.5">
+                                                {monthData.map((count, dayIndex) => (
+                                                    <motion.div
+                                                        key={`${monthIndex}-${dayIndex}`}
+                                                        variants={itemGrid}
+                                                        className={`w-3.5 h-3.5 rounded-sm ${getColorClass(count)} hover:ring-2 ring-[#27b173] transition-all cursor-pointer`}
+                                                        title={`${count} contributions`}
+                                                    ></motion.div>
+                                                ))}
+                                            </div>
+                                        ))}
+                                    </motion.div>
+                                </div>
+                            </div>
+
+                            <div className="flex flex-wrap items-center justify-between gap-6 pt-6 border-t border-gray-100 dark:border-white/5">
+                                <p className="text-sm font-medium text-gray-600 dark:text-gray-400">
+                                    Total: <span className="text-[#27b173] font-bold">{contributions.reduce((a, b) => a + b)}</span> contributions in {selectedYear}
+                                </p>
+
+                                <div className="flex items-center gap-3">
+                                    <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">Less</span>
+                                    <div className="flex gap-1.5">
+                                        {[0, 1, 2, 3, 4].map(i => (
+                                            <div key={i} className={`w-3.5 h-3.5 rounded-sm ${getColorClass(i)}`}></div>
                                         ))}
                                     </div>
-                                ))}
+                                    <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">More</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-
-
-                    {/* Contribution Count */}
-                    <p className="text-gray-700 text-sm mt-4">
-                        {contributions.reduce((a, b) => a + b)} contributions in the last
-                        year
-                    </p>
-
-                    {/* Legend */}
-                    <div className="flex items-center justify-end mt-4 space-x-2">
-                        <span className="text-gray-500 text-sm">Less</span>
-                        <div className="flex space-x-1">
-                            <div className="w-4 h-4 bg-gray-100 rounded"></div>
-                            <div className="w-4 h-4 bg-green-200 rounded"></div>
-                            <div className="w-4 h-4 bg-green-400 rounded"></div>
-                            <div className="w-4 h-4 bg-green-600 rounded"></div>
-                            <div className="w-4 h-4 bg-green-800 rounded"></div>
+                        {/* Year Selector */}
+                        <div className="flex lg:flex-col gap-2 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0">
+                            {years.map((year) => (
+                                <button
+                                    key={year}
+                                    className={`py-3 px-6 rounded-2xl text-sm font-bold transition-all whitespace-nowrap ${selectedYear === year
+                                        ? "bg-gradient-to-tr from-[#27b173] to-[#1a663f] text-white shadow-lg shadow-[#27b173]/20"
+                                        : "glass border-gray-200 dark:border-white/10 text-gray-600 dark:text-gray-400 hover:border-[#27b173]/50"
+                                        }`}
+                                    onClick={() => setSelectedYear(year)}
+                                >
+                                    {year}
+                                </button>
+                            ))}
                         </div>
-                        <span className="text-gray-500 text-sm">More</span>
                     </div>
                 </div>
+            </motion.div>
+        </div>
 
-                {/* Year Selector */}
-                <div className="flex flex-row justify-center lg:flex-col space-x-2 lg:space-x-0 lg:space-y-2 mt-4 lg:mt-0 ml-0 lg:ml-4">
-                    {years.map((year) => (
-                        <button
-                            key={year}
-                            className={`py-1 px-3 rounded-lg ${selectedYear === year
-                                    ? "bg-green-500 text-white"
-                                    : "bg-gray-200 text-gray-700"
-                                }`}
-                            onClick={() => setSelectedYear(year)}
-                        >
-                            {year}
-                        </button>
-                    ))}
-                </div>
-                </motion.article>
-            </div>
-       
 
-           
-       
+
+
+
     );
 };
 

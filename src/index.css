@@ -2,42 +2,95 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
 /* Base styles (light mode) */
 /* Base styles (light mode) */
 
+/* Global Design Tokens */
+:root {
+  --primary: #27b173;
+  --primary-dark: #1a663f;
+  --primary-glow: rgba(39, 177, 115, 0.15);
+  --background-light: #f8fafc;
+  --background-dark: #020617;
+  --text-light: #0f172a;
+  --text-dark: #f1f5f9;
+}
+
 body {
-  background-color: #ffffff;
-  color: #000000;
-  background-image: url('./assets/bgnoice.png'); /* Light mode background image */
+  background-color: var(--background-light);
+  color: var(--text-light);
+  background-image: url('./assets/bgnoice.png');
   background-position: center;
   background-attachment: fixed;
+  font-family: 'Outfit', sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.5s ease;
 }
 
 /* Dark mode styles */
 body.dark {
-  background-color: #121212;
-  color: #ffffff;
-  background-image: url('./assets/bgnoice.png'); /* Light mode background image */
-  background-position: center;
-  background-attachment: fixed;
+  background-color: var(--background-dark);
+  color: var(--text-dark);
 }
 
-/* Tailwind overrides for dark mode */
-.dark .bg-black {
-  background-color: #333333;
+/* Premium Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05);
+  will-change: transform, opacity;
 }
 
-.dark .bg-gray-800 {
-  background-color: #2d2d2d;
+.dark .glass {
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.2);
+  will-change: transform, opacity;
 }
 
-.dark .text-white {
-  color: #ffffff;
+/* Optimization Utilities */
+.optimize-gpu {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  will-change: transform, opacity;
 }
 
-.dark .hover:text-gray-400 {
-  transition: color 0.3s ease;
-  color: #cccccc;
+/* Mesh Gradient Backgrounds */
+.mesh-gradient {
+  background-image:
+    radial-gradient(at 0% 0%, rgba(39, 177, 115, 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(39, 177, 115, 0.05) 0px, transparent 50%);
+}
+
+.dot-grid {
+  background-image: radial-gradient(circle, currentColor 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27b17333;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #27b173;
 }
 
 .bg-noice {
@@ -46,42 +99,54 @@ body.dark {
   background-position: center;
 }
 
+
 @font-face {
-  font-family: 'MyFont1';  /* Name to refer to the font in your styles */
+  font-family: 'MyFont1';
+  /* Name to refer to the font in your styles */
   src: url('./assets//fonts/font1.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'MyFont2';  /* Name to refer to the font in your styles */
+  font-family: 'MyFont2';
+  /* Name to refer to the font in your styles */
   src: url('./assets//fonts/font2.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
-  font-family: 'MyFont3';  /* Name to refer to the font in your styles */
+  font-family: 'MyFont3';
+  /* Name to refer to the font in your styles */
   src: url('./assets//fonts/font3.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
-  font-family: 'MyFont4';  /* Name to refer to the font in your styles */
+  font-family: 'MyFont4';
+  /* Name to refer to the font in your styles */
   src: url('./assets//fonts/font4.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
-  font-family: 'MyFont5';  /* Name to refer to the font in your styles */
+  font-family: 'MyFont5';
+  /* Name to refer to the font in your styles */
   src: url('./assets//fonts/font5.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
+
 /* App.css or a global CSS file */
 .path-animation {
   animation: draw 2.5s ease-in-out infinite, fadeIn 0.5s ease-in-out;
-  stroke-dasharray: 5000; /* Set it larger than the path length */
-  stroke-dashoffset: 5000; /* Start with the path hidden */
+  stroke-dasharray: 5000;
+  /* Set it larger than the path length */
+  stroke-dashoffset: 5000;
+  /* Start with the path hidden */
 }
 
 /* Animation to draw the path */
@@ -89,6 +154,7 @@ body.dark {
   0% {
     stroke-dashoffset: 5000;
   }
+
   100% {
     stroke-dashoffset: 0;
   }
@@ -99,6 +165,7 @@ body.dark {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -110,6 +177,7 @@ body.dark {
   align-items: center;
   margin-top: 50px;
 }
+
 @import "https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css";
 
 .logo {
@@ -122,19 +190,32 @@ body.dark {
   left: 50%;
   width: 1px;
   height: 100%;
-  background-color: #aeb4c1; /* Change color as needed */
+  background-color: #aeb4c1;
+  /* Change color as needed */
   transform: translateX(-50%);
 }
 
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes bounceOnce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .animate-fadeIn {
