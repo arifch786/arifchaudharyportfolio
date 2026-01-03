@@ -6,7 +6,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
   const [isDarkMode, setIsDarkMode] = useState(() => {
-    return localStorage.getItem('theme') === 'dark';
+    const savedTheme = localStorage.getItem('theme');
+    return savedTheme ? savedTheme === 'dark' : true;
   });
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();

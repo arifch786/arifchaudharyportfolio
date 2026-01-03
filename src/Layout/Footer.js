@@ -2,6 +2,7 @@ import React from "react";
 import { FaReact, FaFigma } from "react-icons/fa";
 import { SiTailwindcss, SiGithub, SiFramer, SiJavascript } from "react-icons/si";
 import { motion } from 'framer-motion';
+import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
   const techStack = [
@@ -79,9 +80,12 @@ const Footer = () => {
               </p>
             </div>
             <div className="h-[1px] w-16 bg-gradient-to-r from-transparent to-[#27b173]/40 lg:bg-gradient-to-l" />
-            <p className="text-[10px] font-black text-[#27b173] uppercase tracking-[0.3em] opacity-60">
-              Next-Gen Portfolio v2.0
-            </p>
+            <div className="flex items-center gap-2">
+              <MdEmail size={24} />
+              <p className="text-[10px] font-black text-[#27b173] uppercase tracking-[0.3em] opacity-60">
+                arifraza787898@gmail.com
+              </p>
+            </div>
           </div>
         </div>
 
