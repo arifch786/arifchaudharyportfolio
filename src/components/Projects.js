@@ -33,7 +33,7 @@ const Projects = () => {
         },
         {
             id: 5,
-            company: "Hmb Solutions Pvt. Ltd.",
+            company: "Freelance",
             project: "AuctionIntel",
             link: "https://auctionintel.co.uk/",
             role: "Frontend Developer",
