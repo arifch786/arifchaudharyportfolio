@@ -137,35 +137,54 @@ const Navbar = () => {
         </div>
       </div>
 
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setIsMenuOpen(false)}
+            className="fixed inset-0 z-40 bg-black/20 backdrop-blur-sm lg:hidden"
+          />
+        )}
+      </AnimatePresence>
+
       {/* Mobile Menu */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="overflow-hidden border-t border-gray-100 bg-white/95 backdrop-blur-xl dark:border-white/5 dark:bg-black/95 lg:hidden"
+            initial={{ opacity: 0, y: -20, height: 0 }}
+            animate={{ opacity: 1, y: 0, height: 'auto' }}
+            exit={{ opacity: 0, y: -20, height: 0 }}
+            transition={{ duration: 0.4, ease: [0.3, 0.86, 0.36, 1] }}
+            className="glass relative z-50 overflow-hidden border-t border-gray-100/50 dark:border-white/5 lg:hidden"
           >
             <div className="flex flex-col gap-2 p-6">
-              {navLinks.map((link) => (
-                <Link
+              {navLinks.map((link, index) => (
+                <motion.div
                   key={link.path}
-                  to={link.path}
-                  onClick={() => setIsMenuOpen(false)}
-                  className={`flex items-center justify-between rounded-xl px-4 py-3 text-base font-semibold transition-all ${isActive(link.path)
-                    ? 'bg-[#27b173] text-white'
-                    : 'text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-white'
-                    }`}
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.1, duration: 0.3 }}
                 >
-                  {link.name}
-                  {isActive(link.path) && (
-                    <motion.div
-                      layoutId="active-dot"
-                      className="h-1.5 w-1.5 rounded-full bg-white"
-                    />
-                  )}
-                </Link>
+                  <Link
+                    to={link.path}
+                    onClick={() => setIsMenuOpen(false)}
+                    className={`group flex items-center justify-between rounded-xl px-4 py-3 text-base font-semibold transition-all duration-300 ${isActive(link.path)
+                      ? 'bg-gradient-to-r from-[#27b173] to-[#1a663f] text-white shadow-md shadow-[#27b173]/20'
+                      : 'text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-white'
+                      }`}
+                  >
+                    <span>{link.name}</span>
+                    {isActive(link.path) && (
+                      <motion.div
+                        layoutId="mobile-dot"
+                        className="h-2 w-2 rounded-full bg-white shadow-sm"
+                      />
+                    )}
+                  </Link>
+                </motion.div>
               ))}
             </div>
           </motion.div>

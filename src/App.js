@@ -9,11 +9,13 @@ import LandingPage from '../src/LayoutLandingPage'
 import Projects from './pages/project';
 import ContactUs from "./pages/contactus"
 import Blogs from './pages/blogs';
+import ScrollToTop from './components/ScrollToTop';
 
 
 const App = () => {
   return (
     <HashRouter>
+      <ScrollToTop />
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-grow">
