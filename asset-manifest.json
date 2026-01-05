@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/arifchaudharyportfolio/static/css/main.81c62fb3.css",
-    "main.js": "/arifchaudharyportfolio/static/js/main.20a2ab53.js",
+    "main.css": "/arifchaudharyportfolio/static/css/main.81bfa81e.css",
+    "main.js": "/arifchaudharyportfolio/static/js/main.76d96c60.js",
     "static/media/Untitled ‑ Made with FlexClip (7).mp4": "/arifchaudharyportfolio/static/media/Untitled ‑ Made with FlexClip (7).c0bb5a67ab204dfb92a6.mp4",
     "static/media/Yellow and Blue Modern Business Presentation (1).mp4": "/arifchaudharyportfolio/static/media/Yellow and Blue Modern Business Presentation (1).4070fc78f5301c327898.mp4",
     "static/media/healmindbody.mp4": "/arifchaudharyportfolio/static/media/healmindbody.c77b6307bf93e7eae63d.mp4",
@@ -35,6 +35,7 @@
     "static/media/14.jpg": "/arifchaudharyportfolio/static/media/14.e51535883975876e5b08.jpg",
     "static/media/translation2.png": "/arifchaudharyportfolio/static/media/translation2.dd81a33b5a798b2a360e.png",
     "static/media/bgnoice.png": "/arifchaudharyportfolio/static/media/bgnoice.56af95d40084f094eb73.png",
+    "static/media/updated resume.pdf": "/arifchaudharyportfolio/static/media/updated resume.df321507a138ca15cf02.pdf",
     "static/media/font5.woff2": "/arifchaudharyportfolio/static/media/font5.793e270c559610d2ba3b.woff2",
     "static/media/logocoo.png": "/arifchaudharyportfolio/static/media/logocoo.269eef0c3df2c35e9347.png",
     "static/media/cardmate2.png": "/arifchaudharyportfolio/static/media/cardmate2.7873fa7a57ed69da86d1.png",
@@ -48,11 +49,11 @@
     "static/media/healmb.webp": "/arifchaudharyportfolio/static/media/healmb.fe034dad325c38a559fd.webp",
     "index.html": "/arifchaudharyportfolio/index.html",
     "static/media/About _ Victor Eke-8.svg": "/arifchaudharyportfolio/static/media/About _ Victor Eke-8.b33d48e5e42a770c03cb6139b3dc4381.svg",
-    "main.81c62fb3.css.map": "/arifchaudharyportfolio/static/css/main.81c62fb3.css.map",
-    "main.20a2ab53.js.map": "/arifchaudharyportfolio/static/js/main.20a2ab53.js.map"
+    "main.81bfa81e.css.map": "/arifchaudharyportfolio/static/css/main.81bfa81e.css.map",
+    "main.76d96c60.js.map": "/arifchaudharyportfolio/static/js/main.76d96c60.js.map"
   },
   "entrypoints": [
-    "static/css/main.81c62fb3.css",
-    "static/js/main.20a2ab53.js"
+    "static/css/main.81bfa81e.css",
+    "static/js/main.76d96c60.js"
   ]
 }
