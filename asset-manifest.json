@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/arifchaudharyportfolio/static/css/main.81bfa81e.css",
-    "main.js": "/arifchaudharyportfolio/static/js/main.76d96c60.js",
+    "main.css": "/arifchaudharyportfolio/static/css/main.125820d1.css",
+    "main.js": "/arifchaudharyportfolio/static/js/main.27f13839.js",
     "static/media/Untitled ‑ Made with FlexClip (7).mp4": "/arifchaudharyportfolio/static/media/Untitled ‑ Made with FlexClip (7).c0bb5a67ab204dfb92a6.mp4",
     "static/media/Yellow and Blue Modern Business Presentation (1).mp4": "/arifchaudharyportfolio/static/media/Yellow and Blue Modern Business Presentation (1).4070fc78f5301c327898.mp4",
     "static/media/healmindbody.mp4": "/arifchaudharyportfolio/static/media/healmindbody.c77b6307bf93e7eae63d.mp4",
@@ -49,11 +49,11 @@
     "static/media/healmb.webp": "/arifchaudharyportfolio/static/media/healmb.fe034dad325c38a559fd.webp",
     "index.html": "/arifchaudharyportfolio/index.html",
     "static/media/About _ Victor Eke-8.svg": "/arifchaudharyportfolio/static/media/About _ Victor Eke-8.b33d48e5e42a770c03cb6139b3dc4381.svg",
-    "main.81bfa81e.css.map": "/arifchaudharyportfolio/static/css/main.81bfa81e.css.map",
-    "main.76d96c60.js.map": "/arifchaudharyportfolio/static/js/main.76d96c60.js.map"
+    "main.125820d1.css.map": "/arifchaudharyportfolio/static/css/main.125820d1.css.map",
+    "main.27f13839.js.map": "/arifchaudharyportfolio/static/js/main.27f13839.js.map"
   },
   "entrypoints": [
-    "static/css/main.81bfa81e.css",
-    "static/js/main.76d96c60.js"
+    "static/css/main.125820d1.css",
+    "static/js/main.27f13839.js"
   ]
 }
