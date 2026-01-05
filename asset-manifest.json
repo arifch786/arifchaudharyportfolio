@@ -1,14 +1,38 @@
 {
   "files": {
-    "main.css": "/arifchaudharyportfolio/static/css/main.7cee40ab.css",
-    "main.js": "/arifchaudharyportfolio/static/js/main.3102f21a.js",
+    "main.css": "/arifchaudharyportfolio/static/css/main.81c62fb3.css",
+    "main.js": "/arifchaudharyportfolio/static/js/main.20a2ab53.js",
+    "static/media/Untitled ‑ Made with FlexClip (7).mp4": "/arifchaudharyportfolio/static/media/Untitled ‑ Made with FlexClip (7).c0bb5a67ab204dfb92a6.mp4",
+    "static/media/Yellow and Blue Modern Business Presentation (1).mp4": "/arifchaudharyportfolio/static/media/Yellow and Blue Modern Business Presentation (1).4070fc78f5301c327898.mp4",
+    "static/media/healmindbody.mp4": "/arifchaudharyportfolio/static/media/healmindbody.c77b6307bf93e7eae63d.mp4",
+    "static/media/aimhalalvideo.mp4": "/arifchaudharyportfolio/static/media/aimhalalvideo.227836333782c6c94e95.mp4",
+    "static/media/cardmate.mp4": "/arifchaudharyportfolio/static/media/cardmate.04f2378abb16aedeb4ff.mp4",
+    "static/media/screencapture-aimhalal-2025-12-23-01_51_29.png": "/arifchaudharyportfolio/static/media/screencapture-aimhalal-2025-12-23-01_51_29.0d53283971dd9cf97114.png",
+    "static/media/hmbconnectvideo.mp4": "/arifchaudharyportfolio/static/media/hmbconnectvideo.efc287fa92cdf4730620.mp4",
+    "static/media/screencapture-arifch786-github-io-healmbwebsite-2025-12-25-22_57_21.png": "/arifchaudharyportfolio/static/media/screencapture-arifch786-github-io-healmbwebsite-2025-12-25-22_57_21.ea3ff7e60cab269cc36e.png",
+    "static/media/screencapture-connect-healmb-administration-discovery-2025-12-25-22_41_35.png": "/arifchaudharyportfolio/static/media/screencapture-connect-healmb-administration-discovery-2025-12-25-22_41_35.da4b7036b25709cb2774.png",
+    "static/media/screencapture-auctionintel-co-uk-2025-12-23-01_01_00.png": "/arifchaudharyportfolio/static/media/screencapture-auctionintel-co-uk-2025-12-23-01_01_00.2529a5151656a01c09c1.png",
+    "static/media/screencapture-connecthmb-home-2025-12-23-12_38_51.png": "/arifchaudharyportfolio/static/media/screencapture-connecthmb-home-2025-12-23-12_38_51.8e9eb16f44674c78e490.png",
+    "static/media/screencapture-auctionintel-co-uk-user-dashboard-2025-12-23-01_02_08.png": "/arifchaudharyportfolio/static/media/screencapture-auctionintel-co-uk-user-dashboard-2025-12-23-01_02_08.5c9356ab1532c8d0fedd.png",
+    "static/media/screencapture-auctionintel-co-uk-admin-requests-2025-12-23-01_07_11.png": "/arifchaudharyportfolio/static/media/screencapture-auctionintel-co-uk-admin-requests-2025-12-23-01_07_11.6f8d3664c5552e6f87fc.png",
+    "static/media/screencapture-connect-healmb-clinic-dashboard-2026-01-05-21_58_40.png": "/arifchaudharyportfolio/static/media/screencapture-connect-healmb-clinic-dashboard-2026-01-05-21_58_40.8513e1e76736d68dd0d7.png",
     "static/media/auction.png": "/arifchaudharyportfolio/static/media/auction.23449c2faf460b5d60e2.png",
+    "static/media/screencapture-connecthmb-2025-12-23-12_41_07.png": "/arifchaudharyportfolio/static/media/screencapture-connecthmb-2025-12-23-12_41_07.9633a47aed6fec4c0dfa.png",
+    "static/media/screencapture-connecthmb-admin-dashboard-2025-12-23-12_39_53.png": "/arifchaudharyportfolio/static/media/screencapture-connecthmb-admin-dashboard-2025-12-23-12_39_53.322a8f0e4adf5a7af4dd.png",
+    "static/media/screencapture-aimhalal-dashboard-home-2025-12-23-01_52_14.png": "/arifchaudharyportfolio/static/media/screencapture-aimhalal-dashboard-home-2025-12-23-01_52_14.0bca5307e0c4e42e4742.png",
+    "static/media/screencapture-aimhalal-vendor-Home-2025-12-23-01_51_12.png": "/arifchaudharyportfolio/static/media/screencapture-aimhalal-vendor-Home-2025-12-23-01_51_12.0bea6ae796af0eebb9aa.png",
     "static/media/blogimg7.jpg": "/arifchaudharyportfolio/static/media/blogimg7.76810045594d29fedc3f.jpg",
+    "static/media/Blue Modern Mobile Application Presentation (1).png": "/arifchaudharyportfolio/static/media/Blue Modern Mobile Application Presentation (1).9a6022b622c4c3c42da6.png",
+    "static/media/Blue Modern Mobile Application Presentation (2).png": "/arifchaudharyportfolio/static/media/Blue Modern Mobile Application Presentation (2).522b55edbedaf546d695.png",
+    "static/media/Blue Modern Mobile Application Presentation.png": "/arifchaudharyportfolio/static/media/Blue Modern Mobile Application Presentation.52d230811f3a2bda4cee.png",
     "static/media/lcc.png": "/arifchaudharyportfolio/static/media/lcc.43344398322a0613aef7.png",
     "static/media/3699048341.png": "/arifchaudharyportfolio/static/media/3699048341.b740c61704c6c257a912.png",
     "static/media/aboutsection.jpg": "/arifchaudharyportfolio/static/media/aboutsection.acb350eccca9296e516e.jpg",
+    "static/media/9.jpg": "/arifchaudharyportfolio/static/media/9.43a5cc82de880b8a7645.jpg",
     "static/media/blogimg4.jpg": "/arifchaudharyportfolio/static/media/blogimg4.d7a04698d53f4667bd92.jpg",
     "static/media/blogimg3.jpg": "/arifchaudharyportfolio/static/media/blogimg3.42332cf2c9ee0991dce1.jpg",
+    "static/media/4.jpg": "/arifchaudharyportfolio/static/media/4.4ecbccc415321023ffd2.jpg",
+    "static/media/14.jpg": "/arifchaudharyportfolio/static/media/14.e51535883975876e5b08.jpg",
     "static/media/translation2.png": "/arifchaudharyportfolio/static/media/translation2.dd81a33b5a798b2a360e.png",
     "static/media/bgnoice.png": "/arifchaudharyportfolio/static/media/bgnoice.56af95d40084f094eb73.png",
     "static/media/font5.woff2": "/arifchaudharyportfolio/static/media/font5.793e270c559610d2ba3b.woff2",
@@ -24,11 +48,11 @@
     "static/media/healmb.webp": "/arifchaudharyportfolio/static/media/healmb.fe034dad325c38a559fd.webp",
     "index.html": "/arifchaudharyportfolio/index.html",
     "static/media/About _ Victor Eke-8.svg": "/arifchaudharyportfolio/static/media/About _ Victor Eke-8.b33d48e5e42a770c03cb6139b3dc4381.svg",
-    "main.7cee40ab.css.map": "/arifchaudharyportfolio/static/css/main.7cee40ab.css.map",
-    "main.3102f21a.js.map": "/arifchaudharyportfolio/static/js/main.3102f21a.js.map"
+    "main.81c62fb3.css.map": "/arifchaudharyportfolio/static/css/main.81c62fb3.css.map",
+    "main.20a2ab53.js.map": "/arifchaudharyportfolio/static/js/main.20a2ab53.js.map"
   },
   "entrypoints": [
-    "static/css/main.7cee40ab.css",
-    "static/js/main.3102f21a.js"
+    "static/css/main.81c62fb3.css",
+    "static/js/main.20a2ab53.js"
   ]
 }
