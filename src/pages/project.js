@@ -1,12 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import image1 from "../assets/images/projectsimages/healmb.webp";
-import image3 from "../assets/images/projectsimages/logohmb.png";
-import image6 from "../assets/images/projectsimages/auction.png";
-import image7 from "../assets/images/projectsimages/logocoo.png";
-import image8 from "../assets/images/projectsimages/translation2.png";
-import image9 from "../assets/images/projectsimages/lcc.png";
-import image11 from "../assets/images/projectsimages/cardmate2.png";
-import image12 from "../assets/images/projectsimages/aimhalal.png";
+import { useNavigate } from "react-router-dom";
+import { projectData } from "../data/projectsData";
 
 import { motion } from 'framer-motion';
 
@@ -104,89 +98,11 @@ const Project = () => {
     }, []);
 
 
-    const projectData = [
-        {
-            id: 4,
-            company: "Hmb Solutions Pvt. Ltd.",
-            project: "healmindbody Connect",
-            link: "https://connecthmb.com/",
-            role: "Frontend Developer",
-            date: "2023 - Present",
-            description: "Worked on connecting users with mental and physical wellbeing resources through an intuitive web platform.",
-            image: image7,
-        },
-        {
-            id: 10,
-            company: "AimHalal",
-            project: "AimHalal",
-            link: "https://aimhalal.com/",
-            role: "Frontend Developer",
-            date: "2025",
-            description: "Built the AimHalal platform to help users find halal products and services with an intuitive browsing experience.",
-            image: image12,
-        },
-        {
-            id: 5,
-            company: "Freelance",
-            project: "AuctionIntel",
-            link: "https://auctionintel.co.uk/",
-            role: "Frontend Developer",
-            date: "2024",
-            description: "Built and optimized user interfaces for an auction insights platform focused on delivering data and analytics.",
-            image: image6,
-        },
-        {
-            id: 6,
-            company: "Hmb Solutions Pvt. Ltd.",
-            project: "Heal Mind and Body",
-            link: "https://healmb.com/",
-            role: "Frontend Developer",
-            date: "2024",
-            description: "Developed interactive and responsive frontend components for the Heal Mind and Body wellness website.",
-            image: image1,
-        },
-        {
-            id: 7,
-            company: "Hmb Solutions Pvt. Ltd.",
-            project: "Translation App",
-            link: "https://play.google.com/store/apps/details?id=com.translatornow&hl=en",
-            role: "Mobile App Developer",
-            date: "2024",
-            description: "Developed a mobile translation app with real-time language support and clean UX for global users.",
-            image: image8,
-        },
-        {
-            id: 8,
-            company: "Hmb Solutions Pvt. Ltd.",
-            project: "LCC Cricket Academy",
-            link: "https://play.google.com/store/apps/details?id=com.lccshotgunsversion01&hl=en",
-            role: "Mobile App Developer",
-            date: "2024",
-            description: "Created an Android cricket academy app featuring training schedules, updates and interactive features for players and coaches.",
-            image: image9,
-        },
-        {
-            id: 9,
-            company: "Hmb Solutions Pvt. Ltd.",
-            project: "CardMate",
-            link: "",
-            role: "Frontend Developer",
-            date: "In Progress",
-            description: "Currently developing the CardMate project focused on seamless digital card management solutions.",
-            image: image11,
-        },
-        {
-            id: 3,
-            company: "Hmb Solutions Pvt. Ltd.",
-            project: "healMindAndBody",
-            link: "https://arifch786.github.io/healmbwebsite/",
-            role: "Frontend Developer",
-            date: "March, 2024",
-            description: "As a Frontend Developer, I am responsible for designing user-friendly web applications with a focus on user experience.",
-            image: image3,
-        },
+    const navigate = useNavigate();
 
-    ];
+    const handleProjectClick = (id) => {
+        navigate(`/project/${id}`);
+    };
 
     return (
         <div className="flex items-center justify-center min-h-screen p-6 md:p-12 md:pt-32 bg-transparent">
@@ -209,7 +125,8 @@ const Project = () => {
                             <motion.article
                                 key={data.id}
                                 ref={addToRefs}
-                                className="glass rounded-[3rem] p-10 flex flex-col items-center text-center group border border-gray-200 dark:border-white/5"
+                                onClick={() => handleProjectClick(data.id)}
+                                className="glass rounded-[3rem] p-10 flex flex-col items-center text-center group border border-gray-200 dark:border-white/5 cursor-pointer hover:border-[#27b173]/50 transition-colors"
                             >
                                 <div className="bg-white/50 dark:bg-white/5 glass p-5 mb-8 flex justify-center rounded-[2rem] shadow-xl border border-white/20 dark:border-white/5 group-hover:rotate-[5deg] transition-transform duration-200">
                                     <img
@@ -236,6 +153,7 @@ const Project = () => {
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="inline-flex items-center gap-2 text-gray-900 dark:text-white font-black text-sm uppercase tracking-widest border-b-2 border-[#27b173] pb-1 hover:text-[#27b173] transition-colors"
+                                            onClick={(e) => e.stopPropagation()} // Prevent card click when clicking link
                                         >
                                             View Case Study
                                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

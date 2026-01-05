@@ -25,7 +25,12 @@ const Navbar = () => {
 
   const toggleTheme = () => setIsDarkMode(prev => !prev);
   const toggleMenu = () => setIsMenuOpen(prev => !prev);
-  const isActive = (path) => location.pathname === path;
+  const isActive = (path) => {
+    if (path === '/projects-page' && location.pathname.startsWith('/project/')) {
+      return true;
+    }
+    return location.pathname === path;
+  };
 
   const navLinks = [
     { name: 'Home', path: '/' },

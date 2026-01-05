@@ -53,26 +53,26 @@ const Herosection = () => {
 
                         <motion.h1
                             style={{ fontFamily: 'MyFont5, sans-serif' }}
-                            className="text-6xl text-gray-900 dark:text-white sm:text-7xl lg:text-8.5xl font-black leading-[1.05] tracking-tight"
+                            className="text-6xl text-gray-900 dark:text-white sm:text-7xl lg:text-7xl font-black leading-[1.05] tracking-tight"
                             variants={itemVariants}
                         >
-                            Full Stack <span className="text-transparent bg-clip-text bg-gradient-to-br from-[#27b173] via-[#2dc682] to-[#1a663f]">Software Engineer</span>
+                            Full Stack <span className="text-transparent bg-clip-text bg-gradient-to-br from-[#27b173] via-[#2dc682] to-[#1a663f]">Web & App Developer / Software Engineer</span>
                         </motion.h1>
 
                         <motion.p
                             className="text-gray-600 dark:text-gray-400 text-lg sm:text-2xl max-w-2xl leading-relaxed font-medium"
                             variants={itemVariants}
                         >
-                            I'm <span className="text-gray-900 dark:text-white border-b-2 border-[#27b173]/30">Muhammad Arif Raza</span>. Crafting high-performance, accessible, and beautiful web applications for the modern web.
+                            I'm <span className="text-gray-900 dark:text-white border-b-2 border-[#27b173]/30">Muhammad Arif Raza</span>. Crafting high-performance, accessible, and beautiful web and mobile applications for the modern digital era. I specialize in building scalable full-stack solutions and intuitive mobile experiences that drive user engagement. My passion lies in solving complex engineering challenges to deliver seamless, impact-driven software products.
                         </motion.p>
                     </div>
 
                     <motion.div className="flex flex-wrap gap-5" variants={itemVariants}>
                         {[
                             { icon: FaGithub, href: "https://github.com/arifch786", title: "GitHub" },
-                            { icon: FaTwitter, href: "#", title: "Twitter" },
-                            { icon: FaLinkedin, href: "#", title: "LinkedIn" },
-                            { icon: FaInstagram, href: "#", title: "Instagram" },
+                            { icon: FaTwitter, href: "https://x.com/chuadhary_raza?s=21", title: "Twitter" },
+                            { icon: FaLinkedin, href: "https://www.linkedin.com/in/muhammad-arif-raza-6b7bb3190/", title: "LinkedIn" },
+                            { icon: FaInstagram, href: "https://www.instagram.com/arifchaudhary_007", title: "Instagram" },
                             { icon: FaYoutube, href: "#", title: "YouTube" },
                             { icon: FaCodepen, href: "#", title: "CodePen" }
                         ].map((social, idx) => (
@@ -125,7 +125,7 @@ const Herosection = () => {
                                 </div>
                                 <div>
                                     <p className="text-[10px] text-gray-400 font-bold uppercase tracking-wider">Experience</p>
-                                    <p className="text-base font-bold text-gray-900 dark:text-white leading-tight">Digital Architect</p>
+                                    <p className="text-base font-bold text-gray-900 dark:text-white leading-tight">Full Stack Engineer</p>
                                 </div>
                             </div>
                         </motion.div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import image1 from "../assets/images/projectsimages/healmb.webp";
 import image3 from "../assets/images/projectsimages/logohmb.png";
@@ -10,6 +11,7 @@ import image11 from "../assets/images/projectsimages/cardmate2.png";
 import image12 from "../assets/images/projectsimages/aimhalal.png";
 
 const Projects = () => {
+    const navigate = useNavigate();
     const projectData = [
         {
             id: 4,
@@ -158,7 +160,8 @@ const Projects = () => {
                             key={data.id}
                             variants={cardVariants}
                             whileHover={{ y: -8, scale: 1.01 }}
-                            className="group relative flex flex-col bg-white dark:bg-slate-900 rounded-[2.5rem] border border-gray-200 dark:border-white/10 transition-all duration-300 overflow-hidden shadow-xl hover:shadow-2xl hover:border-[#27b173]/30"
+                            onClick={() => navigate(`/project/${data.id}`)}
+                            className="group relative flex flex-col bg-white dark:bg-slate-900 rounded-[2.5rem] border border-gray-200 dark:border-white/10 transition-all duration-300 overflow-hidden shadow-xl hover:shadow-2xl hover:border-[#27b173]/30 cursor-pointer"
                             style={{ willChange: "transform, opacity" }}
                         >
                             <div className="p-10 space-y-8 flex flex-col h-full relative z-10">
@@ -196,6 +199,7 @@ const Projects = () => {
                                     {data.link && (
                                         <a
                                             href={data.link}
+                                            onClick={(e) => e.stopPropagation()}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="group/btn relative px-6 py-3 overflow-hidden rounded-2xl bg-gray-900 dark:bg-white text-white dark:text-black font-black text-xs uppercase tracking-widest transition-all duration-300 hover:shadow-xl hover:shadow-[#27b173]/20"

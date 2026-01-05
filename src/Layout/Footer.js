@@ -1,5 +1,5 @@
 import React from "react";
-import { FaReact, FaFigma } from "react-icons/fa";
+import { FaReact, FaFigma, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 import { SiTailwindcss, SiGithub, SiFramer, SiJavascript } from "react-icons/si";
 import { motion } from 'framer-motion';
 import { MdEmail } from "react-icons/md";
@@ -85,6 +85,18 @@ const Footer = () => {
               <p className="text-[10px] font-black text-[#27b173] uppercase tracking-[0.3em] opacity-60">
                 arifraza787898@gmail.com
               </p>
+            </div>
+            {/* Social Links */}
+            <div className="flex gap-4">
+              <a href="https://www.linkedin.com/in/muhammad-arif-raza-6b7bb3190/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-[#27b173] transition-colors duration-300">
+                <FaLinkedin size={20} />
+              </a>
+              <a href="https://x.com/chuadhary_raza?s=21" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-[#27b173] transition-colors duration-300">
+                <FaTwitter size={20} />
+              </a>
+              <a href="https://www.instagram.com/arifchaudhary_007" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-[#27b173] transition-colors duration-300">
+                <FaInstagram size={20} />
+              </a>
             </div>
           </div>
         </div>

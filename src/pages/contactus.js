@@ -69,9 +69,9 @@ const ContactUs = () => {
 
     const socialLinks = [
         { icon: <FiGithub />, href: "https://github.com/arifch786", label: "GitHub" },
-        { icon: <FiLinkedin />, href: "https://linkedin.com", label: "LinkedIn" },
-        { icon: <FiInstagram />, href: "https://instagram.com", label: "Instagram" },
-        { icon: <FiTwitter />, href: "https://twitter.com", label: "Twitter" },
+        { icon: <FiLinkedin />, href: "https://www.linkedin.com/in/muhammad-arif-raza-6b7bb3190/", label: "LinkedIn" },
+        { icon: <FiInstagram />, href: "https://www.instagram.com/arifchaudhary_007", label: "Instagram" },
+        { icon: <FiTwitter />, href: "https://x.com/chuadhary_raza?s=21", label: "Twitter" },
     ];
 
     return (

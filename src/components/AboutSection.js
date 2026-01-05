@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import aboutsectionimage from "../assets/images/aboutsection.jpg";
+import resume from "../assets/resume/updated resume.pdf";
 import { MdEmail, MdDownload } from "react-icons/md";
 import aboutsectionsvg from "../assets/About _ Victor Eke-8.svg";
 import { FaReact, FaSass, FaNodeJs, FaNetworkWired, FaBootstrap, FaGit, FaGitlab, FaPython, FaFirefoxBrowser, FaChrome, FaFigma, FaSpotify, FaSteam, FaHeadphones, FaApple } from 'react-icons/fa';
@@ -122,14 +123,14 @@ const AboutSection = () => {
                             style={{ fontFamily: 'MyFont5, sans-serif' }}
                             className="text-5xl sm:text-7xl font-black text-gray-900 dark:text-white leading-[1.1]"
                         >
-                            Architecting the <span className="text-[#27b173]">Digital Future</span> from Rawalpindi.
+                            Transforming Complex Vision into <span className="text-[#27b173]">Digital Reality</span>.
                         </motion.h1>
                         <div className="space-y-6 max-w-3xl">
                             <p className="text-gray-600 dark:text-gray-400 text-xl leading-relaxed">
-                                I'm <span className="font-bold text-gray-900 dark:text-white">Muhammad Arif Raza</span>, a full-stack engineer with a focus on building scalable, high-performance applications.
+                                I'm <span className="font-bold text-gray-900 dark:text-white">Muhammad Arif Raza</span>, a Full Stack Web and App Developer / Full Stack Software Engineer with a focus on building scalable, high-performance applications.
                             </p>
                             <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
-                                With over 2 years of experience at HMB Solutions, I've mastered the art of turning complex business requirements into elegant digital realities.
+                                With over 4 years of experience at HMB Solutions, I've mastered the art of turning complex business requirements into elegant digital realities. I specialize in building robust solutions for both web and mobile platforms.
                             </p>
                         </div>
                     </div>
@@ -150,7 +151,10 @@ const AboutSection = () => {
 
                     <div className="flex flex-col gap-4">
                         <motion.a
-                            href="#"
+                            href={resume}
+                            download="Muhammad_Arif_Raza_Resume.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
                             className="flex items-center justify-center gap-3 w-full py-5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-[2rem] font-black text-lg shadow-xl"
