@@ -83,7 +83,7 @@ const Footer = () => {
             <div className="flex items-center gap-2">
               <MdEmail size={24} />
               <p className="text-[10px] font-black text-[#27b173] uppercase tracking-[0.3em] opacity-60">
-                arifraza787898@gmail.com
+                real.arifraza007@gmail.com
               </p>
             </div>
             {/* Social Links */}

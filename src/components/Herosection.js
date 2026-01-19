@@ -53,7 +53,7 @@ const Herosection = () => {
 
                         <motion.h1
                             style={{ fontFamily: 'MyFont5, sans-serif' }}
-                            className="text-6xl text-gray-900 dark:text-white sm:text-7xl lg:text-7xl font-black leading-[1.05] tracking-tight"
+                            className="text-4xl text-gray-900 dark:text-white sm:text-5xl lg:text-7xl font-black leading-[1.05] tracking-tight"
                             variants={itemVariants}
                         >
                             Full Stack <span className="text-transparent bg-clip-text bg-gradient-to-br from-[#27b173] via-[#2dc682] to-[#1a663f]">Web & App Developer / Software Engineer</span>
