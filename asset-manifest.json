@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/arifchaudharyportfolio/static/css/main.125820d1.css",
-    "main.js": "/arifchaudharyportfolio/static/js/main.dd897004.js",
+    "main.js": "/arifchaudharyportfolio/static/js/main.351cef31.js",
     "static/media/Untitled ‑ Made with FlexClip (7).mp4": "/arifchaudharyportfolio/static/media/Untitled ‑ Made with FlexClip (7).c0bb5a67ab204dfb92a6.mp4",
     "static/media/Yellow and Blue Modern Business Presentation (1).mp4": "/arifchaudharyportfolio/static/media/Yellow and Blue Modern Business Presentation (1).4070fc78f5301c327898.mp4",
     "static/media/healmindbody.mp4": "/arifchaudharyportfolio/static/media/healmindbody.c77b6307bf93e7eae63d.mp4",
@@ -31,11 +31,11 @@
     "static/media/9.jpg": "/arifchaudharyportfolio/static/media/9.43a5cc82de880b8a7645.jpg",
     "static/media/blogimg4.jpg": "/arifchaudharyportfolio/static/media/blogimg4.d7a04698d53f4667bd92.jpg",
     "static/media/blogimg3.jpg": "/arifchaudharyportfolio/static/media/blogimg3.42332cf2c9ee0991dce1.jpg",
+    "static/media/updated resume.pdf": "/arifchaudharyportfolio/static/media/updated resume.6f9a339bdd653484a585.pdf",
     "static/media/4.jpg": "/arifchaudharyportfolio/static/media/4.4ecbccc415321023ffd2.jpg",
     "static/media/14.jpg": "/arifchaudharyportfolio/static/media/14.e51535883975876e5b08.jpg",
     "static/media/translation2.png": "/arifchaudharyportfolio/static/media/translation2.dd81a33b5a798b2a360e.png",
     "static/media/bgnoice.png": "/arifchaudharyportfolio/static/media/bgnoice.56af95d40084f094eb73.png",
-    "static/media/updated resume.pdf": "/arifchaudharyportfolio/static/media/updated resume.df321507a138ca15cf02.pdf",
     "static/media/font5.woff2": "/arifchaudharyportfolio/static/media/font5.793e270c559610d2ba3b.woff2",
     "static/media/logocoo.png": "/arifchaudharyportfolio/static/media/logocoo.269eef0c3df2c35e9347.png",
     "static/media/cardmate2.png": "/arifchaudharyportfolio/static/media/cardmate2.7873fa7a57ed69da86d1.png",
@@ -50,10 +50,10 @@
     "index.html": "/arifchaudharyportfolio/index.html",
     "static/media/About _ Victor Eke-8.svg": "/arifchaudharyportfolio/static/media/About _ Victor Eke-8.b33d48e5e42a770c03cb6139b3dc4381.svg",
     "main.125820d1.css.map": "/arifchaudharyportfolio/static/css/main.125820d1.css.map",
-    "main.dd897004.js.map": "/arifchaudharyportfolio/static/js/main.dd897004.js.map"
+    "main.351cef31.js.map": "/arifchaudharyportfolio/static/js/main.351cef31.js.map"
   },
   "entrypoints": [
     "static/css/main.125820d1.css",
-    "static/js/main.dd897004.js"
+    "static/js/main.351cef31.js"
   ]
 }
