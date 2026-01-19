@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import aboutsectionimage from "../assets/images/aboutsection.jpg";
-import resume from "../assets/resume/updated resume.pdf";
+import resume from "../assets/resume/Muhammad Arif Raza.pdf";
 import { MdEmail, MdDownload } from "react-icons/md";
 import aboutsectionsvg from "../assets/About _ Victor Eke-8.svg";
 import { FaReact, FaSass, FaNodeJs, FaNetworkWired, FaBootstrap, FaGit, FaGitlab, FaPython, FaFirefoxBrowser, FaChrome, FaFigma, FaSpotify, FaSteam, FaHeadphones, FaApple } from 'react-icons/fa';
